@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #2A7ADF;
+  --color-accent-dark: #4991EF;
+  --color-accent-deep: #1959BF;
+  --color-accent-light: #E8F4FD;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F2F2F7;
+  --color-ink: #1C1C1E;
+  --color-ink-muted: #8E8E93;
+  --color-ink-faint: #C7C7CC;
+  --color-line: #D1D1D6;
+  --color-positive: #34C759;
+
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  color: var(--color-ink);
+  background-color: var(--color-surface);
+}
+
+/* Scroll offset for sticky nav */
+html {
+  scroll-padding-top: 5rem;
+}
+
+/* Animate-on-scroll states */
+.aos-hidden {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.aos-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .aos-hidden {
+    opacity: 1;
+    transform: none;
+  }
+  .aos-visible {
+    transition: none;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #F2F2F7;
+    background-color: #1C1C1E;
+  }
+  :root {
+    --color-surface: #1C1C1E;
+    --color-surface-alt: #2C2C2E;
+    --color-ink: #F2F2F7;
+    --color-ink-muted: #AEAEB2;
+    --color-ink-faint: #48484A;
+    --color-line: #38383A;
+    --color-accent-light: #1A2A3E;
+  }
+}
