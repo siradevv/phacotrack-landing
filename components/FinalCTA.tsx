@@ -1,30 +1,6 @@
 import Image from "next/image";
 import AnimateOnScroll from "./AnimateOnScroll";
 
-function AppStoreBadge() {
-  return (
-    <svg
-      viewBox="0 0 120 40"
-      className="h-[52px] w-auto"
-      role="img"
-      aria-label="Download on the App Store"
-    >
-      <rect width="120" height="40" rx="6" fill="#000" />
-      <text x="60" y="13" textAnchor="middle" fill="#fff" fontSize="7" fontFamily="-apple-system, sans-serif" fontWeight="400">
-        Download on the
-      </text>
-      <text x="60" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontFamily="-apple-system, sans-serif" fontWeight="600">
-        App Store
-      </text>
-      <path
-        d="M17 11.5c0.8-1 1.3-2.3 1.2-3.5-1.2 0.1-2.6 0.8-3.5 1.8-0.8 0.9-1.4 2.2-1.2 3.5 1.3 0.1 2.6-0.7 3.5-1.8zm1.2 1.9c-1.9-0.1-3.6 1.1-4.5 1.1-0.9 0-2.3-1-3.8-1-2 0-3.8 1.1-4.8 2.9-2 3.5-0.5 8.7 1.5 11.5 1 1.4 2.1 3 3.6 2.9 1.5-0.1 2-0.9 3.8-0.9 1.8 0 2.3 0.9 3.8 0.9 1.6 0 2.5-1.4 3.5-2.9 1.1-1.6 1.5-3.2 1.5-3.3-0.1 0-3-1.1-3-4.5 0-2.8 2.3-4.2 2.4-4.3-1.3-2-3.4-2.2-4-2.4z"
-        fill="#fff"
-        transform="translate(7, 9) scale(0.6)"
-      />
-    </svg>
-  );
-}
-
 export default function FinalCTA() {
   return (
     <>
@@ -37,15 +13,37 @@ export default function FinalCTA() {
           <AnimateOnScroll>
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-[1.9rem] leading-tight font-bold tracking-tight text-ink md:text-[2.5rem]">
-                Start tracking your outcomes today.
+                Know your numbers.
+                <br />
+                Start with your next case.
               </h2>
-              <p className="mt-4 text-[1.1rem] text-ink-muted">
-                Join the surgeons who are using data to improve patient care.
+              <p className="mt-4 text-[1.1rem] leading-relaxed text-ink-muted">
+                Free to download. No credit card required.
+                <br />
+                See your real outcomes from day one.
               </p>
               <div className="mt-8 flex justify-center">
                 <a href="#download" aria-label="Download on the App Store">
-                  <AppStoreBadge />
+                  <img
+                    src="/app-store-badge.svg"
+                    alt="Download on the App Store"
+                    className="h-[52px] w-auto"
+                  />
                 </a>
+              </div>
+              <div className="mt-5 flex flex-wrap items-center justify-center gap-4 text-[12px] text-ink-faint">
+                <span className="flex items-center gap-1.5">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                  AES-256 encrypted
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                  Offline-first
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                  Face ID protected
+                </span>
               </div>
             </div>
           </AnimateOnScroll>
@@ -53,8 +51,8 @@ export default function FinalCTA() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-line bg-surface py-10">
-        <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-6 px-6 md:flex-row md:justify-between">
+      <footer className="border-t border-line bg-surface py-8 md:py-10">
+        <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-5 px-6 md:flex-row md:justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Image
@@ -71,10 +69,10 @@ export default function FinalCTA() {
 
           {/* Links */}
           <div className="flex flex-wrap justify-center gap-6 text-[14px] text-ink-muted">
-            <a href="#" className="transition-colors hover:text-ink">
+            <a href="/privacy" className="transition-colors hover:text-ink">
               Privacy Policy
             </a>
-            <a href="#" className="transition-colors hover:text-ink">
+            <a href="/terms" className="transition-colors hover:text-ink">
               Terms of Use
             </a>
             <a

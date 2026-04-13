@@ -1,11 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
-import HowItWorks from "@/components/HowItWorks";
+import Solution from "@/components/Solution";
+
 import Features from "@/components/Features";
 import Comparison from "@/components/Comparison";
-import BuiltBy from "@/components/BuiltBy";
-import Privacy from "@/components/Privacy";
+import Trust from "@/components/Trust";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
@@ -17,11 +17,10 @@ export default function Home() {
       <main>
         <Hero />
         <Problem />
-        <HowItWorks />
+        <Solution />
         <Features />
         <Comparison />
-        <BuiltBy />
-        <Privacy />
+        <Trust />
         <Pricing />
         <FAQ />
         <FinalCTA />

@@ -15,7 +15,7 @@ export default function TermsPage() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Terms of Service
         </h1>
-        <p className="mt-2 text-sm text-ink-muted">Last updated: 6 April 2026</p>
+        <p className="mt-2 text-sm text-ink-muted">Last updated: 11 April 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
           <Section title="Acceptance of Terms">
@@ -69,9 +69,10 @@ export default function TermsPage() {
           <Section title="AI Document Scanning">
             <p>
               The AI scanning feature sends photos of clinical documents to our
-              server for data extraction via the Anthropic Claude API. By
-              consenting to this feature, you acknowledge that your images will be
-              processed by a third-party service.
+              server for data extraction using AI services provided by Google
+              (Gemini) and Anthropic (Claude). By using this feature, you
+              acknowledge that your images will be processed by third-party AI
+              services.
             </p>
             <p>
               You must only upload clinically necessary documents — do not upload

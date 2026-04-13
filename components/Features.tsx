@@ -3,278 +3,131 @@ import AnimateOnScroll from "./AnimateOnScroll";
 
 const features = [
   {
-    title: "AI Document Scanning",
-    headline: "Snap a photo. Get your data.",
-    description:
-      "Point your camera at any biometry printout — optical or immersion. PhacoTrack's AI reads AL, K1, K2, ACD, LT, WTW, and more. No manual entry. No transcription errors.",
+    title: "AI-Powered Scanning",
+    description: "Point your camera at any printout. AI extracts the data for you.",
     bullets: [
-      "Works with IOLMaster, Lenstar, and other devices",
-      "Supports autokeratometry and ECC printouts",
-      "Phaco machine summary extraction",
+      "Biometry: AL, K1, K2, ACD, LT, WTW, CCT, and full IOL tables",
+      "Also scans autokeratometry, specular microscopy, and phaco summaries",
+      "Supports all major optical and immersion biometers",
     ],
-    mockContent: (
-      <div className="flex h-full flex-col bg-[#F2F2F7]">
-        <div className="h-12" />
-        <div className="mx-3 text-[10px] font-bold text-[#1C1C1E]">Biometry Scan</div>
-        <div className="mx-3 mt-2 rounded-xl bg-white p-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-          <div className="text-[8px] font-semibold text-[#34C759]">Extracted Successfully</div>
-          <div className="mt-2 space-y-1.5">
-            {[
-              ["AL", "23.45 mm"],
-              ["K1", "43.25 D"],
-              ["K2", "44.10 D"],
-              ["ACD", "3.12 mm"],
-              ["LT", "4.56 mm"],
-              ["WTW", "11.8 mm"],
-            ].map(([k, v]) => (
-              <div key={k} className="flex justify-between">
-                <span className="text-[8px] text-[#8E8E93]">{k}</span>
-                <span className="text-[8px] font-semibold text-[#1C1C1E]">{v}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="mx-3 mt-2 rounded-xl bg-white p-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-          <div className="text-[8px] font-medium text-[#8E8E93]">IOL CALCULATIONS</div>
-          <div className="mt-1 space-y-1">
-            {[
-              ["SRK/T", "21.5 D"],
-              ["Barrett", "21.0 D"],
-              ["Holladay 1", "21.5 D"],
-            ].map(([f, p]) => (
-              <div key={f} className="flex justify-between">
-                <span className="text-[8px] text-[#8E8E93]">{f}</span>
-                <span className="text-[8px] font-semibold text-[#2A7ADF]">{p}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
+      </svg>
     ),
   },
   {
-    title: "Personal Analytics Dashboard",
-    headline: "See your real surgical performance.",
-    description:
-      "Six analytics modules give you a complete picture of your outcomes: refractive accuracy, visual outcomes, safety metrics, phaco energy trends, SIA analysis, and follow-up coverage.",
+    title: "Personal Analytics",
+    description: "Six modules that show your real surgical performance.",
     bullets: [
-      "Mean absolute error tracking (\u00b10.25D / \u00b10.50D / \u00b11.0D)",
-      "Predicted vs. achieved scatter plots",
-      "Complication rate trends over time",
-      "Monthly performance benchmarks",
+      "Refractive accuracy, visual outcomes, complication rates, and more",
+      "SIA analysis with polar plots",
+      "Compare against published benchmarks (RCOphth, UK NOD)",
     ],
-    mockContent: (
-      <div className="flex h-full flex-col bg-[#F2F2F7]">
-        <div className="h-12" />
-        <div className="mx-3 text-[10px] font-bold text-[#1C1C1E]">Analytics</div>
-        <div className="space-y-1.5 px-3 mt-2">
-          <div className="rounded-xl bg-white p-2.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-            <div className="text-[7px] text-[#8E8E93]">PRED. vs ACHIEVED</div>
-            <div className="mt-1.5 relative h-[50px]">
-              {/* Scatter dots */}
-              {[
-                [15, 38], [25, 32], [35, 28], [42, 22], [50, 18],
-                [58, 15], [65, 12], [72, 20], [80, 25], [85, 30],
-                [20, 42], [30, 35], [45, 25], [55, 20], [70, 15],
-              ].map(([x, y], i) => (
-                <div
-                  key={i}
-                  className="absolute h-[4px] w-[4px] rounded-full bg-[#2A7ADF]"
-                  style={{ left: `${x}%`, top: `${y}%`, opacity: 0.7 }}
-                />
-              ))}
-              {/* Trend line */}
-              <div className="absolute top-[10%] left-[10%] h-[1px] w-[80%] origin-left rotate-[25deg] bg-[#34C759]" />
-            </div>
-          </div>
-          <div className="grid grid-cols-3 gap-1">
-            {[
-              ["\u00b10.25D", "72%", "#34C759"],
-              ["\u00b10.50D", "87%", "#2A7ADF"],
-              ["\u00b11.0D", "96%", "#8E8E93"],
-            ].map(([label, val, color]) => (
-              <div key={label as string} className="rounded-lg bg-white p-2 text-center shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-                <div className="text-[7px] text-[#8E8E93]">{label}</div>
-                <div className="text-[12px] font-bold" style={{ color: color as string }}>{val}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+      </svg>
     ),
   },
   {
-    title: "IOL Constant Personalisation",
-    headline: "Your A-constant, optimised to your hands.",
-    description:
-      "PhacoTrack automatically calculates your personalised A-constant from your accumulated case data — so every IOL calculation gets more accurate as you log more cases.",
+    title: "Complete Case Records",
+    description: "Log every detail from pre-op to final follow-up.",
     bullets: [
-      "Auto-calculated from your surgical history",
-      "Per-IOL model optimisation",
-      "Improves with every case you log",
+      "Your preferred IOL, formula, and technique are pre-selected",
+      "Follow-ups at Day 1, Week 1, Month 1, and extended intervals",
+      "25+ comorbidity flags and complication debrief",
     ],
-    mockContent: (
-      <div className="flex h-full flex-col bg-[#F2F2F7]">
-        <div className="h-12" />
-        <div className="mx-3 text-[10px] font-bold text-[#1C1C1E]">A-Constant</div>
-        <div className="space-y-1.5 px-3 mt-2">
-          <div className="rounded-xl bg-white p-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-            <div className="text-[7px] text-[#8E8E93]">SN60WF (ALCON)</div>
-            <div className="flex items-baseline gap-2 mt-1">
-              <span className="text-[18px] font-bold text-[#2A7ADF]">119.01</span>
-              <span className="text-[8px] text-[#34C759]">optimised</span>
-            </div>
-            <div className="mt-1 text-[8px] text-[#8E8E93]">Manufacturer: 119.00 &middot; 147 cases</div>
-          </div>
-          <div className="rounded-xl bg-white p-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-            <div className="text-[7px] text-[#8E8E93]">ZCB00 (J&J VISION)</div>
-            <div className="flex items-baseline gap-2 mt-1">
-              <span className="text-[18px] font-bold text-[#2A7ADF]">119.42</span>
-              <span className="text-[8px] text-[#34C759]">optimised</span>
-            </div>
-            <div className="mt-1 text-[8px] text-[#8E8E93]">Manufacturer: 119.30 &middot; 63 cases</div>
-          </div>
-          <div className="rounded-xl bg-white p-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-            <div className="text-[7px] text-[#8E8E93]">PREDICTION IMPROVEMENT</div>
-            <div className="flex items-end gap-[2px] mt-1.5">
-              {[0.52, 0.48, 0.44, 0.41, 0.38, 0.35, 0.33, 0.31].map((v, i) => (
-                <div key={i} className="flex-1 rounded-t-sm bg-[#34C759]" style={{ height: `${v * 70}px`, opacity: 0.5 + i * 0.065 }} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V19.5a2.25 2.25 0 002.25 2.25h.75" />
+      </svg>
     ),
   },
   {
-    title: "SIA Calculator & Vector Plots",
-    headline: "Understand your astigmatic footprint.",
-    description:
-      "Built-in SIA calculator with publication-quality double-angle polar plots. See your surgically induced astigmatism by incision type, location, and technique.",
+    title: "SIA Calculator",
+    description: "Understand your surgically induced astigmatism.",
     bullets: [
-      "Interactive polar plot visualisation",
-      "Magnitude distribution analysis",
-      "SIA trends over time",
+      "Alpins vector analysis with double-angle polar plots",
+      "Centroid calculation with standard deviation",
+      "Filter by incision type, location, and time period",
     ],
-    mockContent: (
-      <div className="flex h-full flex-col bg-[#F2F2F7]">
-        <div className="h-12" />
-        <div className="mx-3 text-[10px] font-bold text-[#1C1C1E]">SIA Analysis</div>
-        <div className="px-3 mt-2">
-          <div className="rounded-xl bg-white p-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-            {/* Polar plot */}
-            <div className="relative mx-auto aspect-square w-[85%]">
-              <div className="absolute inset-0 rounded-full border border-[#E5E5EA]" />
-              <div className="absolute inset-[20%] rounded-full border border-[#E5E5EA]" />
-              <div className="absolute inset-[40%] rounded-full border border-[#E5E5EA]" />
-              {/* Cross lines */}
-              <div className="absolute top-0 bottom-0 left-1/2 w-[1px] -translate-x-1/2 bg-[#E5E5EA]" />
-              <div className="absolute right-0 left-0 top-1/2 h-[1px] -translate-y-1/2 bg-[#E5E5EA]" />
-              {/* Data points */}
-              {[
-                [48, 42], [52, 38], [55, 45], [45, 50], [50, 48],
-                [47, 44], [53, 40], [51, 46], [49, 43], [46, 47],
-                [54, 41], [48, 49], [52, 44], [50, 42],
-              ].map(([x, y], i) => (
-                <div
-                  key={i}
-                  className="absolute h-[5px] w-[5px] rounded-full bg-[#2A7ADF]"
-                  style={{ left: `${x}%`, top: `${y}%`, opacity: 0.7 }}
-                />
-              ))}
-              {/* Centroid */}
-              <div className="absolute top-[44%] left-[50%] h-[7px] w-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#FF3B30] bg-[#FF3B30]/30" />
-              {/* Axis labels */}
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[7px] text-[#8E8E93]">90°</span>
-              <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 text-[7px] text-[#8E8E93]">270°</span>
-              <span className="absolute top-1/2 -right-3 -translate-y-1/2 text-[7px] text-[#8E8E93]">0°</span>
-              <span className="absolute top-1/2 -left-4 -translate-y-1/2 text-[7px] text-[#8E8E93]">180°</span>
-            </div>
-          </div>
-          <div className="mt-1.5 grid grid-cols-2 gap-1.5">
-            <div className="rounded-lg bg-white p-2 text-center shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-              <div className="text-[7px] text-[#8E8E93]">Mean SIA</div>
-              <div className="text-[12px] font-bold text-[#1C1C1E]">0.42 D</div>
-            </div>
-            <div className="rounded-lg bg-white p-2 text-center shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-              <div className="text-[7px] text-[#8E8E93]">Axis</div>
-              <div className="text-[12px] font-bold text-[#1C1C1E]">95°</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15M4.5 19.5H12M4.5 19.5V12" />
+      </svg>
+    ),
+  },
+  {
+    title: "Export & Audit",
+    description: "Your data, ready when you need it.",
+    bullets: [
+      "Export your full case database as CSV for Excel or research tools",
+      "Generate PDF case reports for individual patients",
+      "Anonymise patient data for presentations or publications",
+    ],
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+      </svg>
+    ),
+  },
+  {
+    title: "Cloud Sync",
+    description: "Encrypted backup across all your devices.",
+    bullets: [
+      "AES-256 encryption for all patient identifiers",
+      "Syncs automatically in the background",
+      "Only your Apple ID can decrypt your data",
+    ],
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
+      </svg>
     ),
   },
 ];
 
-function FeatureMockFrame({ children }: { children: React.ReactNode }) {
+function CheckIcon() {
   return (
-    <div className="rounded-[1.6rem] border-[8px] border-[#1a1a1a] bg-[#1a1a1a] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)]">
-      <div className="relative aspect-[393/852] w-[200px] overflow-hidden rounded-[1.1rem] bg-white md:w-[220px]">
-        <div className="absolute top-2 left-1/2 z-10 h-[16px] w-[60px] -translate-x-1/2 rounded-full bg-[#1a1a1a]" />
-        {children}
-        <div className="absolute bottom-1.5 left-1/2 h-[3px] w-[60px] -translate-x-1/2 rounded-full bg-black/15" />
-      </div>
-    </div>
+    <svg className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-positive" fill="currentColor" viewBox="0 0 20 20">
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
   );
 }
 
 export default function Features() {
   return (
-    <SectionWrapper id="features" alt>
-      <p className="mb-3 text-[13px] font-semibold tracking-[0.15em] text-accent uppercase">
-        Features
-      </p>
-      <h2 className="max-w-2xl text-[1.9rem] leading-tight font-bold tracking-tight text-ink md:text-[2.25rem]">
-        Everything you need to become a better surgeon.
-      </h2>
+    <SectionWrapper id="features">
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="mb-3 text-[13px] font-semibold tracking-[0.15em] text-accent uppercase">
+          Features
+        </p>
+        <h2 className="text-[1.9rem] leading-tight font-bold tracking-tight text-ink md:text-[2.25rem]">
+          Built around real cataract surgery workflows.
+        </h2>
+      </div>
 
-      <div className="mt-16 space-y-20 md:space-y-28">
+      <div className="mx-auto mt-14 grid max-w-4xl gap-4 md:grid-cols-2">
         {features.map((feature, i) => (
-          <AnimateOnScroll key={feature.title}>
-            <div
-              className={`flex flex-col items-center gap-10 md:flex-row md:gap-16 ${
-                i % 2 === 1 ? "md:flex-row-reverse" : ""
-              }`}
-            >
-              {/* Mock */}
-              <div className="flex-shrink-0">
-                <FeatureMockFrame>{feature.mockContent}</FeatureMockFrame>
+          <AnimateOnScroll key={feature.title} delay={i * 60}>
+            <div className="flex h-full flex-col rounded-2xl border border-line bg-surface p-6 transition-shadow hover:shadow-md">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  {feature.icon}
+                </div>
+                <h3 className="text-[1rem] font-bold text-ink">{feature.title}</h3>
               </div>
-
-              {/* Text */}
-              <div className="flex-1 text-center md:text-left">
-                <p className="text-[13px] font-semibold text-accent">
-                  {feature.title}
-                </p>
-                <h3 className="mt-2 text-[1.5rem] leading-snug font-bold text-ink md:text-[1.75rem]">
-                  {feature.headline}
-                </h3>
-                <p className="mt-3 text-[1rem] leading-relaxed text-ink-muted">
-                  {feature.description}
-                </p>
-                <ul className="mt-5 space-y-2.5">
-                  {feature.bullets.map((bullet) => (
-                    <li
-                      key={bullet}
-                      className="flex items-start gap-2.5 text-[15px] text-ink-muted md:justify-start"
-                    >
-                      <svg
-                        className="mt-1 h-4 w-4 flex-shrink-0 text-positive"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <p className="mt-3 text-[14px] text-ink-muted">{feature.description}</p>
+              <ul className="mt-3 space-y-1.5">
+                {feature.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-start gap-2 text-[13px] text-ink-muted">
+                    <CheckIcon />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
             </div>
           </AnimateOnScroll>
         ))}

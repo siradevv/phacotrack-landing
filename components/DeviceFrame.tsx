@@ -8,7 +8,7 @@ export default function DeviceFrame({
   return (
     <div className={`relative inline-block ${className}`}>
       {/* Outer bezel */}
-      <div className="relative rounded-[3rem] border-[12px] border-[#1a1a1a] bg-[#1a1a1a] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)]">
+      <div className="relative rounded-[3rem] border-[12px] border-[#1a1a1a] bg-[#1a1a1a] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.25)] dark:shadow-[0_25px_60px_-12px_rgba(0,0,0,0.6)]">
         {/* Screen */}
         <div className="relative aspect-[393/852] w-[260px] overflow-hidden rounded-[2.25rem] bg-white md:w-[290px]">
           {/* Dynamic Island */}
@@ -17,8 +17,7 @@ export default function DeviceFrame({
           {/* Screen content */}
           <div className="relative h-full w-full">{children}</div>
 
-          {/* Home indicator */}
-          <div className="absolute bottom-2 left-1/2 z-20 h-[4px] w-[100px] -translate-x-1/2 rounded-full bg-black/20" />
+{/* No home indicator — cleaner look */}
         </div>
       </div>
 

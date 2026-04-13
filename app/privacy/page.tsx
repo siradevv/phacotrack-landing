@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Privacy Policy
         </h1>
-        <p className="mt-2 text-sm text-ink-muted">Last updated: 6 April 2026</p>
+        <p className="mt-2 text-sm text-ink-muted">Last updated: 11 April 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
           <Section title="What Data We Collect">
@@ -69,24 +69,25 @@ export default function PrivacyPage() {
               sheets, etc.) and return structured measurements.
             </p>
             <p>
-              Our server processes images using the Anthropic Claude API, a
-              third-party AI service provided by Anthropic, PBC. The image is sent
-              to Anthropic&rsquo;s API for text recognition and data extraction.
-              Per Anthropic&rsquo;s privacy policy, API inputs are not used to
-              train their models.
+              Our server processes images using AI services provided by Google
+              (Gemini) and Anthropic (Claude). Google Gemini is the primary
+              extraction engine; Anthropic Claude serves as a fallback. Per each
+              provider&rsquo;s API terms, inputs are not used to train their
+              models.
             </p>
             <p>
               Only the image is transmitted — no patient names, hospital numbers,
-              or other identifying information is included in the request to
-              Anthropic.
+              or other identifying information is included in the request to any
+              AI provider.
             </p>
             <p>
               Photos are processed in real time and are not stored on our servers
-              or by Anthropic beyond the duration of the API request.
+              or by any AI provider beyond the duration of the API request.
             </p>
             <p>
-              You must explicitly consent to AI scanning before first use. You can
-              revoke consent at any time in Settings.
+              By signing in and using the scanning feature, you consent to
+              AI-powered document processing. You can stop using scanning at any
+              time.
             </p>
           </Section>
 
@@ -136,14 +137,27 @@ export default function PrivacyPage() {
             </p>
             <p>
               When you use AI document scanning, your image is processed via
-              Anthropic&rsquo;s API, which may involve servers located in the
-              United States.
+              Google&rsquo;s Gemini API or Anthropic&rsquo;s Claude API, which
+              may involve servers located in the United States.
             </p>
             <p>
               By using these features, you consent to the transfer of data outside
               your country of residence in accordance with Thailand&rsquo;s
               Personal Data Protection Act (PDPA) and other applicable data
               protection laws.
+            </p>
+          </Section>
+
+          <Section title="Your Rights">
+            <p>
+              You may request access to, correction of, or deletion of your
+              personal data at any time by contacting us or using the in-app
+              account deletion feature.
+            </p>
+            <p>
+              If you are in the European Economic Area, you have additional rights
+              under GDPR including data portability and the right to object to
+              processing. Contact us to exercise these rights.
             </p>
           </Section>
 

@@ -89,7 +89,7 @@ export default function Navbar() {
 
       {/* Mobile menu overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-8 bg-surface/95 backdrop-blur-xl md:hidden">
+        <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-surface/95 backdrop-blur-xl md:hidden">
           {links.map((link) => (
             <a
               key={link.href}
