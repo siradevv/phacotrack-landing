@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: "What\u2019s included in the free tier?",
-    a: "Up to 30 cases, 5 AI scans per day, and a basic analytics dashboard. The free tier never expires and doesn\u2019t require a credit card. Upgrade to Pro when you want unlimited cases, full analytics, export, and cloud sync.",
+    a: "Up to 20 cases, 5 AI scans per day, and a basic analytics dashboard. The free tier never expires and doesn\u2019t require a credit card. Upgrade to Pro when you want unlimited cases, full analytics, export, and cloud sync.",
   },
 ];
 

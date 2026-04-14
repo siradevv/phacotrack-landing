@@ -2,7 +2,7 @@ import SectionWrapper from "./SectionWrapper";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const freeBullets = [
-  "Up to 30 cases",
+  "Up to 20 cases",
   "5 AI scans per day",
   "Basic analytics dashboard",
   "Works offline, always",
