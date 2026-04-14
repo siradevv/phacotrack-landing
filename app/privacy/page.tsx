@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Privacy Policy
         </h1>
-        <p className="mt-2 text-sm text-ink-muted">Last updated: 11 April 2026</p>
+        <p className="mt-2 text-sm text-ink-muted">Last updated: 14 April 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
           <Section title="What Data We Collect">
@@ -38,8 +38,8 @@ export default function PrivacyPage() {
               sync is entirely optional.
             </p>
             <p>
-              Images captured for AI scanning are stored locally and are never
-              uploaded to the cloud.
+              Photos captured for AI scanning are handled separately — see AI
+              Document Scanning below.
             </p>
           </Section>
 
@@ -63,31 +63,36 @@ export default function PrivacyPage() {
 
           <Section title="AI Document Scanning">
             <p>
-              When you use the AI scanning feature, your photo is sent to our
+              When you use the AI scanning feature, your photo is uploaded to our
               secure server for automatic data extraction. The server uses AI to
               read printed clinical documents (biometry printouts, autokeratometry
-              sheets, etc.) and return structured measurements.
+              sheets, etc.) and return structured measurements. Scanning is not
+              performed on your device — it requires an internet connection.
             </p>
             <p>
               Our server processes images using AI services provided by Google
               (Gemini) and Anthropic (Claude). Google Gemini is the primary
               extraction engine; Anthropic Claude serves as a fallback. Per each
-              provider&rsquo;s API terms, inputs are not used to train their
-              models.
+              provider&rsquo;s API terms, inputs are not retained by the AI
+              provider beyond the duration of the extraction request and are not
+              used to train their models.
             </p>
             <p>
-              Only the image is transmitted — no patient names, hospital numbers,
-              or other identifying information is included in the request to any
-              AI provider.
+              Only the image is transmitted to the AI providers — no patient
+              names, hospital numbers, or other identifying information is
+              included in the request.
             </p>
             <p>
-              Photos are processed in real time and are not stored on our servers
-              or by any AI provider beyond the duration of the API request.
+              After extraction, a copy of the image is retained on our server,
+              linked to your account, so we can monitor extraction accuracy and
+              debug problems. We delete older samples periodically and you may
+              request removal of your samples at any time — see &ldquo;Deleting
+              Your Data&rdquo; below.
             </p>
             <p>
               By signing in and using the scanning feature, you consent to
-              AI-powered document processing. You can stop using scanning at any
-              time.
+              AI-powered document processing and to the server-side retention
+              described above. You can stop using scanning at any time.
             </p>
           </Section>
 
@@ -122,7 +127,18 @@ export default function PrivacyPage() {
             <p>
               If you have cloud sync enabled, you can delete your cloud account
               from Settings &rarr; Account &rarr; Delete Account. This permanently
-              removes all server-side data associated with your account.
+              removes all server-side case data associated with your account.
+            </p>
+            <p>
+              To request removal of retained AI scan images from our server,
+              email us at{" "}
+              <a
+                href="mailto:sira.dev@hotmail.com"
+                className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
+              >
+                sira.dev@hotmail.com
+              </a>{" "}
+              with your account email. We will delete your samples on request.
             </p>
             <p>
               Uninstalling the app removes all local data from your device.

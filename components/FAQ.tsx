@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Is my patient data safe?",
-    a: "Yes. All data is stored locally on your device and protected by Face ID or Touch ID. Cloud sync (Pro) uses AES-256 encryption for all patient identifiers. PhacoTrack never accesses your data \u2014 only you can decrypt it with your Apple ID.",
+    a: "Yes. Case data is stored locally on your device and protected by Face ID or Touch ID. Cloud sync (Pro) encrypts patient identifiers with AES-256 on your device before upload \u2014 only your Apple ID can decrypt them. The one exception is AI scanning: photos are uploaded to our server for extraction and a copy is retained so we can monitor extraction accuracy. You can request removal of your scanned images at any time. See our Privacy Policy for full details.",
   },
   {
     q: "Can I export my data for audits or research?",
