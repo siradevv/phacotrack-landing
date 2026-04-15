@@ -148,8 +148,8 @@ export default function PrivacyPage() {
           <Section title="Cross-Border Data Transfer">
             <p>
               If you enable cloud sync, your case data (with patient-identifiable
-              fields encrypted) is transmitted to and stored on servers located
-              outside of Thailand, operated by Railway Corp. in the United States.
+              fields encrypted) is transmitted to and stored on cloud servers
+              located outside of Thailand, in the United States.
             </p>
             <p>
               When you use AI document scanning, your image is processed via
