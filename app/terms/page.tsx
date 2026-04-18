@@ -144,10 +144,10 @@ export default function TermsPage() {
             <p>
               If you have questions about these terms, contact us at{" "}
               <a
-                href="mailto:sira.dev@hotmail.com"
+                href="mailto:sira@phacotrack.com"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
               >
-                sira.dev@hotmail.com
+                sira@phacotrack.com
               </a>
               .
             </p>
