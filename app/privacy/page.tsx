@@ -127,18 +127,19 @@ export default function PrivacyPage() {
             <p>
               If you have cloud sync enabled, you can delete your cloud account
               from Settings &rarr; Account &rarr; Delete Account. This permanently
-              removes all server-side case data associated with your account.
+              removes all server-side case data <em>and retained AI scan images</em>{" "}
+              associated with your account.
             </p>
             <p>
-              To request removal of retained AI scan images from our server,
-              email us at{" "}
+              If you scanned documents without enabling cloud sync, or need to
+              remove samples without deleting your account, email us at{" "}
               <a
                 href="mailto:sira@phacotrack.com"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
               >
                 sira@phacotrack.com
               </a>{" "}
-              with your account email. We will delete your samples on request.
+              with your account email and we will delete your samples on request.
             </p>
             <p>
               Uninstalling the app removes all local data from your device.
