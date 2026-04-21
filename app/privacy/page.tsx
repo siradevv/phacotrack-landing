@@ -134,10 +134,10 @@ export default function PrivacyPage() {
               If you scanned documents without enabling cloud sync, or need to
               remove samples without deleting your account, email us at{" "}
               <a
-                href="mailto:sira@phacotrack.com"
+                href="mailto:support@phacotrack.com"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
               >
-                sira@phacotrack.com
+                support@phacotrack.com
               </a>{" "}
               with your account email and we will delete your samples on request.
             </p>
@@ -195,10 +195,10 @@ export default function PrivacyPage() {
               If you have questions about this privacy policy or your data,
               contact us at{" "}
               <a
-                href="mailto:sira@phacotrack.com"
+                href="mailto:support@phacotrack.com"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
               >
-                sira@phacotrack.com
+                support@phacotrack.com
               </a>
               .
             </p>
