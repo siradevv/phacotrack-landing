@@ -5,6 +5,19 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy — PhacoTrack",
   description: "PhacoTrack privacy policy — how we handle your data.",
+  alternates: { canonical: "https://phacotrack.com/privacy" },
+  openGraph: {
+    title: "Privacy Policy — PhacoTrack",
+    description: "How PhacoTrack handles patient data, encryption, and cloud sync.",
+    url: "https://phacotrack.com/privacy",
+    type: "article",
+    siteName: "PhacoTrack",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy — PhacoTrack",
+    description: "How PhacoTrack handles patient data, encryption, and cloud sync.",
+  },
 };
 
 export default function PrivacyPage() {
@@ -26,8 +39,8 @@ export default function PrivacyPage() {
             <p>
               Patient identity fields &mdash; name, hospital number, date of
               birth, gender, and notes &mdash; remain on your device. When synced
-              to our server, these fields are encrypted on-device with AES using
-              a key derived from your Apple account.
+              to our server, these fields are encrypted on-device with
+              AES-256-GCM using a key derived from your Apple account.
             </p>
           </Section>
 

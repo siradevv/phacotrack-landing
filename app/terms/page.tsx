@@ -5,6 +5,19 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms of Service — PhacoTrack",
   description: "PhacoTrack terms of service.",
+  alternates: { canonical: "https://phacotrack.com/terms" },
+  openGraph: {
+    title: "Terms of Service — PhacoTrack",
+    description: "Terms of service for the PhacoTrack iOS app.",
+    url: "https://phacotrack.com/terms",
+    type: "article",
+    siteName: "PhacoTrack",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms of Service — PhacoTrack",
+    description: "Terms of service for the PhacoTrack iOS app.",
+  },
 };
 
 export default function TermsPage() {

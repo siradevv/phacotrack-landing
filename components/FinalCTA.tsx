@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AnimateOnScroll from "./AnimateOnScroll";
+import { APP_STORE_URL } from "@/lib/links";
 
 export default function FinalCTA() {
   return (
@@ -23,10 +24,12 @@ export default function FinalCTA() {
                 See your real outcomes from day one.
               </p>
               <div className="mt-8 flex justify-center">
-                <a href="#download" aria-label="Download on the App Store">
-                  <img
+                <a href={APP_STORE_URL} aria-label="Download on the App Store">
+                  <Image
                     src="/app-store-badge.svg"
                     alt="Download on the App Store"
+                    width={165}
+                    height={52}
                     className="h-[52px] w-auto"
                   />
                 </a>

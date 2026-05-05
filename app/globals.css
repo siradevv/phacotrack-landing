@@ -9,7 +9,9 @@
   --color-surface-alt: #F2F2F7;
   --color-ink: #1C1C1E;
   --color-ink-muted: #8E8E93;
-  --color-ink-faint: #C7C7CC;
+  /* WCAG AA on white surface: 4.79:1. Bumped from #C7C7CC (~1.6:1) so legal
+     disclaimers, footer text, and the "Pricing in USD" line are legible. */
+  --color-ink-faint: #6B6B70;
   --color-line: #D1D1D6;
   --color-positive: #34C759;
 
@@ -34,6 +36,15 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Visible keyboard focus ring on all interactive elements. Default browser
+   ring is barely perceptible on dark CTA buttons in Safari; this guarantees
+   a 2px accent outline regardless of background. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 body {
@@ -85,7 +96,9 @@ html {
     --color-surface-alt: #2C2C2E;
     --color-ink: #F2F2F7;
     --color-ink-muted: #AEAEB2;
-    --color-ink-faint: #48484A;
+    /* WCAG AA on dark surface: ~4.7:1. Bumped from #48484A so the same legal
+       text remains readable in dark mode. */
+    --color-ink-faint: #9C9CA3;
     --color-line: #38383A;
     --color-accent-light: #1A2A3E;
   }

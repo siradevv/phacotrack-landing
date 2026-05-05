@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AnimateOnScroll from "./AnimateOnScroll";
+import { APP_STORE_URL } from "@/lib/links";
 
 export default function Solution() {
   return (
@@ -28,10 +29,12 @@ export default function Solution() {
               Your cases, your data, your insights — all from your phone.
             </p>
             <div className="mt-7 flex justify-center">
-              <a href="#download" aria-label="Download on the App Store">
-                <img
+              <a href={APP_STORE_URL} aria-label="Download on the App Store">
+                <Image
                   src="/app-store-badge.svg"
                   alt="Download on the App Store"
+                  width={152}
+                  height={48}
                   className="h-[48px] w-auto"
                 />
               </a>

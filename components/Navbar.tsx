@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { APP_STORE_URL } from "@/lib/links";
 
 const links = [
   { label: "Features", href: "#features" },
@@ -54,7 +55,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#download"
+            href={APP_STORE_URL}
             className="rounded-full bg-ink px-5 py-2 text-[15px] font-semibold text-surface transition-opacity hover:opacity-85"
           >
             Download
@@ -101,7 +102,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#download"
+            href={APP_STORE_URL}
             className="mt-4 rounded-full bg-ink px-8 py-3 text-lg font-semibold text-surface"
             onClick={() => setMenuOpen(false)}
           >

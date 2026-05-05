@@ -1,6 +1,7 @@
 import SectionWrapper from "./SectionWrapper";
 import AnimateOnScroll from "./AnimateOnScroll";
 import { monthlyPriceLabel, yearlyPriceLabel, yearlySavingsPercent } from "@/lib/pricing";
+import { APP_STORE_URL } from "@/lib/links";
 
 const freeBullets = [
   "Up to 20 cases",
@@ -61,7 +62,7 @@ export default function Pricing() {
               ))}
             </ul>
             <a
-              href="#download"
+              href={APP_STORE_URL}
               className="mt-8 block rounded-xl border border-line py-3 text-center text-[15px] font-semibold text-ink transition-colors hover:bg-surface-alt"
             >
               Get Started
@@ -99,7 +100,7 @@ export default function Pricing() {
             </ul>
 
             <a
-              href="#download"
+              href={APP_STORE_URL}
               className="mt-8 block rounded-xl bg-accent py-3 text-center text-[15px] font-semibold text-white transition-opacity hover:opacity-90"
             >
               Start Free Trial

@@ -1,5 +1,7 @@
+import Image from "next/image";
 import DeviceFrame from "./DeviceFrame";
 import AnimateOnScroll from "./AnimateOnScroll";
+import { APP_STORE_URL } from "@/lib/links";
 
 function Sparkline({ data, color }: { data: number[]; color: string }) {
   const max = Math.max(...data);
@@ -185,9 +187,12 @@ function MockDashboard() {
 
 function AppStoreBadge() {
   return (
-    <img
+    <Image
       src="/app-store-badge.svg"
       alt="Download on the App Store"
+      width={140}
+      height={44}
+      priority
       className="h-[44px] w-auto"
     />
   );
@@ -222,7 +227,7 @@ export default function Hero() {
             </AnimateOnScroll>
             <AnimateOnScroll delay={300}>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:justify-start">
-                <a href="#download" aria-label="Download on the App Store">
+                <a href={APP_STORE_URL} aria-label="Download on the App Store">
                   <AppStoreBadge />
                 </a>
                 <a
