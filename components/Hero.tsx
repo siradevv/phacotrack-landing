@@ -226,7 +226,7 @@ export default function Hero() {
                   <AppStoreBadge />
                 </a>
                 <a
-                  href="#how-it-works"
+                  href="#features"
                   className="group flex items-center gap-2 text-[15px] font-semibold text-accent transition-colors hover:text-accent-deep"
                 >
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 transition-colors group-hover:bg-accent/20">
