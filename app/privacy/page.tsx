@@ -28,7 +28,7 @@ export default function PrivacyPage() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Privacy Policy
         </h1>
-        <p className="mt-2 text-sm text-ink-muted">Last updated: 26 April 2026</p>
+        <p className="mt-2 text-sm text-ink-muted">Last updated: 5 May 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
           <Section title="What We Collect">
@@ -121,6 +121,22 @@ export default function PrivacyPage() {
               transmitted. It remains visible until the timer is stopped or you
               dismiss the Live Activity. You are responsible for the physical
               security of your device while a timer is active.
+            </p>
+          </Section>
+
+          <Section title="Calendar Integration">
+            <p>
+              If you enable calendar integration in Settings, PhacoTrack creates
+              surgery and follow-up events in your iOS Calendar. These events
+              include the patient&rsquo;s name and hospital number so each entry
+              is recognisable at a glance.
+            </p>
+            <p>
+              Calendar data is managed by iOS. If you have iCloud Calendar
+              enabled, Apple syncs your calendars across your Apple devices on
+              your behalf &mdash; PhacoTrack does not transmit calendar events
+              to our server. You can disable calendar integration at any time
+              in Settings, which stops new events from being created.
             </p>
           </Section>
 
