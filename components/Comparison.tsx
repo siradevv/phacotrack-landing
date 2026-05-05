@@ -1,4 +1,5 @@
 import SectionWrapper from "./SectionWrapper";
+import { monthlyPriceLabel } from "@/lib/pricing";
 
 function Check({ highlight = false }: { highlight?: boolean }) {
   return (
@@ -26,7 +27,7 @@ const rows = [
   { feature: "Works offline", paper: "N/A", generic: "Varies", enterprise: false, phacotrack: true },
   { feature: "CSV & PDF export", paper: false, generic: "Basic", enterprise: true, phacotrack: true },
   { feature: "Hardware lock-in", paper: "N/A", generic: "N/A", enterprise: "Yes", phacotrack: "None" },
-  { feature: "Price per surgeon", paper: "Free", generic: "$3\u201310/mo", enterprise: "$274\u20139k/mo", phacotrack: "Free\u2013$9.99/mo" },
+  { feature: "Price per surgeon", paper: "Free", generic: "$3\u201310/mo", enterprise: "$274\u20139k/mo", phacotrack: `Free\u2013${monthlyPriceLabel}/mo` },
 ];
 
 function CellContent({ value, highlight = false }: { value: boolean | string; highlight?: boolean }) {

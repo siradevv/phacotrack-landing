@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Privacy Policy
         </h1>
-        <p className="mt-2 text-sm text-ink-muted">Last updated: 14 April 2026</p>
+        <p className="mt-2 text-sm text-ink-muted">Last updated: 26 April 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
           <Section title="What Data We Collect">
@@ -100,9 +100,16 @@ export default function PrivacyPage() {
             <p>
               We do not sell, rent, or share your data with third parties.
             </p>
+          </Section>
+
+          <Section title="Analytics">
             <p>
-              No analytics or tracking SDKs are included in the app. We do not
-              collect usage telemetry.
+              PhacoTrack collects anonymous usage analytics, such as which
+              screens are opened or whether a feature was used, to help us
+              improve the app. Analytics are processed by a third-party service
+              that never receives patient data, case content, free text, or
+              personally identifying information. No advertising identifiers or
+              persistent user IDs are used. You can opt out in Settings.
             </p>
           </Section>
 

@@ -1,5 +1,6 @@
 import SectionWrapper from "./SectionWrapper";
 import AnimateOnScroll from "./AnimateOnScroll";
+import { monthlyPriceLabel, yearlyPriceLabel, yearlySavingsPercent } from "@/lib/pricing";
 
 const freeBullets = [
   "Up to 20 cases",
@@ -78,13 +79,13 @@ export default function Pricing() {
             <h3 className="text-xl font-bold text-ink">Pro</h3>
             <p className="mt-1 text-[14px] text-ink-muted">For surgeons who want the full picture</p>
             <div className="mt-4 flex items-baseline gap-1">
-              <span className="text-[2.5rem] font-bold leading-none text-ink">$9.99</span>
+              <span className="text-[2.5rem] font-bold leading-none text-ink">{monthlyPriceLabel}</span>
               <span className="text-[15px] text-ink-muted">/month</span>
             </div>
             <p className="mt-2 text-[14px] text-ink-muted">
-              or $79.99/year{" "}
+              or {yearlyPriceLabel}/year{" "}
               <span className="inline-flex items-center rounded-full bg-positive/10 px-2.5 py-0.5 text-[12px] font-semibold text-positive">
-                Save 33%
+                Save {yearlySavingsPercent}%
               </span>
             </p>
 
