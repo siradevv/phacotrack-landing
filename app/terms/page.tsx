@@ -18,131 +18,101 @@ export default function TermsPage() {
         <p className="mt-2 text-sm text-ink-muted">Last updated: 26 April 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
-          <Section title="Acceptance of Terms">
+          <Section title="Acceptance">
             <p>
-              By downloading, installing, or using PhacoTrack, you agree to these
-              terms. If you do not agree, please discontinue use.
+              By installing or using PhacoTrack, you agree to these Terms. If you
+              do not agree, please discontinue use.
             </p>
           </Section>
 
-          <Section title="Description of Service">
+          <Section title="What PhacoTrack Is">
             <p>
-              PhacoTrack is a personal surgical case documentation and analytics
-              tool for ophthalmologists, enabling cataract surgery record-keeping
-              and outcome tracking.
+              PhacoTrack is a personal surgical logbook for ophthalmologists. It
+              helps you document cataract cases and review your own outcomes.
             </p>
             <p>
-              PhacoTrack is not a registered medical device and is not intended
-              for clinical decision-making. All information is for personal
-              reference only.
-            </p>
-          </Section>
-
-          <Section title="Account & Cloud Sync">
-            <p>
-              Cloud sync requires Sign in with Apple and is entirely voluntary.
-              The app is fully functional in local-only mode without an account.
-            </p>
-            <p>
-              You are responsible for the security of your Apple ID. We are not
-              liable for unauthorised access resulting from compromised
-              credentials.
+              It is not a registered medical device, electronic health record, or
+              clinical decision-support tool. It does not diagnose, recommend
+              treatment, or substitute for professional clinical judgment. Always
+              verify AI-extracted data before using it in any clinical decision.
             </p>
           </Section>
 
-          <Section title="Subscription & Billing">
+          <Section title="Account & Subscription">
             <p>
-              PhacoTrack offers a free tier and a premium Pro tier. Subscriptions
-              are managed through Apple&rsquo;s App Store and are subject to
-              Apple&rsquo;s pricing and billing policies.
+              Sign in with Apple is required. You are responsible for the
+              security of your Apple ID.
             </p>
             <p>
-              Subscriptions auto-renew unless cancelled at least 24 hours before
-              the end of the current billing period. You can manage or cancel your
-              subscription in your Apple ID settings.
-            </p>
-            <p>
-              Refunds are handled by Apple in accordance with their policies.
-            </p>
-          </Section>
-
-          <Section title="AI Document Scanning">
-            <p>
-              The AI scanning feature uploads photos of clinical documents to
-              our server for data extraction using AI services provided by
-              Google (Gemini) and Anthropic (Claude). By using this feature, you
-              acknowledge that your images will be processed by third-party AI
-              services and that a copy of each uploaded image is retained on our
-              server so we can monitor extraction accuracy. See our{" "}
-              <Link
-                href="/privacy"
-                className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
-              >
-                Privacy Policy
-              </Link>{" "}
-              for full details on retention and how to request removal.
-            </p>
-            <p>
-              You must only upload clinically necessary documents — do not upload
-              patient photographs, staff images, or other non-clinical material.
-            </p>
-          </Section>
-
-          <Section title="Your Data">
-            <p>
-              You retain full ownership of the data you enter into PhacoTrack. We
-              claim no rights to your content.
-            </p>
-            <p>
-              You are responsible for complying with your institution&rsquo;s data
-              governance policies and all applicable regulations.
+              Pro subscriptions are billed through the App Store and renew
+              automatically unless cancelled at least 24 hours before the next
+              billing period. You can manage or cancel anytime in your Apple ID
+              settings. Refunds are handled by Apple.
             </p>
           </Section>
 
           <Section title="Acceptable Use">
             <p>
-              You agree not to attempt unauthorised access to data, reverse
-              engineer the application, or use PhacoTrack for purposes other than
-              personal surgical case logging.
+              Use PhacoTrack only as a personal surgical logbook for qualified
+              ophthalmologists. Do not share your account with anyone, do not
+              upload non-clinical material such as patient photographs or staff
+              images, and do not reverse engineer the app.
+            </p>
+            <p>
+              You are responsible for using PhacoTrack in line with applicable
+              laws and your institution&rsquo;s policies.
             </p>
           </Section>
 
-          <Section title="Disclaimer of Warranties">
+          <Section title="Your Data & Compliance">
             <p>
-              PhacoTrack is provided &ldquo;as is&rdquo; without warranties of
-              any kind, express or implied. The accuracy of AI-extracted data is
-              not guaranteed. You must independently verify all extracted
-              measurements and information.
+              You own the data you enter. We do not claim any rights to it. How
+              we store and process your data is described in the{" "}
+              <Link
+                href="/privacy"
+                className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
+              >
+                Privacy Policy
+              </Link>
+              .
+            </p>
+            <p>
+              PhacoTrack is not a HIPAA-compliant service, and we do not offer
+              Business Associate Agreements. If your country, region, or
+              institution has specific rules about storing patient information
+              &mdash; including HIPAA, GDPR, PDPA, or hospital policy &mdash; it
+              is your responsibility to ensure your use of PhacoTrack complies.
             </p>
           </Section>
 
-          <Section title="Limitation of Liability">
+          <Section title="Disclaimer">
             <p>
-              We are not liable for any indirect, incidental, or consequential
-              damages, including those arising from decisions made based on data
-              in the app.
+              PhacoTrack is provided &ldquo;as is.&rdquo; We do not guarantee
+              that the app will be error-free, always available, or that
+              AI-extracted data will be accurate. You are responsible for keeping
+              backups of important data.
+            </p>
+            <p>
+              To the extent allowed by law, we are not liable for any losses
+              arising from your use of PhacoTrack, including clinical decisions,
+              data loss, or service interruption. Our maximum liability for any
+              claim is limited to what you have paid us in the previous twelve
+              months.
             </p>
           </Section>
 
-          <Section title="Changes to These Terms">
+          <Section title="Changes & Termination">
             <p>
-              We may update these terms from time to time. Continued use of
-              PhacoTrack after changes are posted constitutes acceptance of the
-              updated terms.
-            </p>
-          </Section>
-
-          <Section title="Termination">
-            <p>
-              We may suspend or terminate cloud access for violations of these
-              terms. You can delete your account and all associated data at any
-              time from Settings.
+              We may update these Terms from time to time. Continued use after
+              changes are posted means you accept them. We may suspend cloud
+              access if you violate these Terms. You can delete your account from
+              Settings at any time.
             </p>
           </Section>
 
           <Section title="Contact">
             <p>
-              If you have questions about these terms, contact us at{" "}
+              For questions about these Terms, contact{" "}
               <a
                 href="mailto:support@phacotrack.com"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"

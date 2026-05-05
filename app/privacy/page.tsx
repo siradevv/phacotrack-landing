@@ -18,87 +18,61 @@ export default function PrivacyPage() {
         <p className="mt-2 text-sm text-ink-muted">Last updated: 26 April 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
-          <Section title="What Data We Collect">
+          <Section title="What We Collect">
             <p>
-              PhacoTrack records cataract surgery case data that you enter,
-              including pre-operative measurements, intra-operative details, IOL
-              data, and post-operative follow-up observations.
+              PhacoTrack stores the cataract surgery case data you enter: pre-op
+              measurements, intra-op details, IOL data, and post-op follow-up.
             </p>
             <p>
-              Patient-identifiable information (name, hospital number, date of
-              birth, gender, and notes) is stored locally on your device by
-              default.
-            </p>
-          </Section>
-
-          <Section title="Local-First Storage">
-            <p>
-              All case data is stored on your device in the iOS app sandbox with
-              file-level protection. Your data exists on your phone first — cloud
-              sync is entirely optional.
-            </p>
-            <p>
-              Photos captured for AI scanning are handled separately — see AI
-              Document Scanning below.
+              Patient identity fields &mdash; name, hospital number, date of
+              birth, gender, and notes &mdash; remain on your device. When synced
+              to our server, these fields are encrypted on-device with AES using
+              a key derived from your Apple account.
             </p>
           </Section>
 
-          <Section title="Cloud Sync">
+          <Section title="Account & Cloud Sync">
             <p>
-              Cloud sync is opt-in and requires Sign in with Apple. When enabled,
-              clinical case data is synced to our secure server so you can recover
-              it on a new device.
+              Sign in with Apple is required. Your surgeon setup and case data
+              sync across your signed-in devices through our server. Cloud sync
+              beyond the free tier requires a Pro subscription.
             </p>
             <p>
-              Patient-identifiable fields (name, hospital number, date of birth,
-              gender, notes) are encrypted on your device before upload using a
-              key derived from your Apple ID. Our server only sees an opaque
-              encrypted blob — never plaintext names or identifiers.
+              Patient identity fields are stored on our server only in encrypted
+              form, and all data transfers use HTTPS. Because the encryption key
+              is tied to your Apple account, we technically have the ability to
+              decrypt these fields. As a matter of policy, we do not.
             </p>
             <p>
-              You can sign out or delete your cloud account at any time from
-              Settings.
+              You can delete your account from Settings at any time. Doing so
+              permanently removes your data from our server.
             </p>
           </Section>
 
           <Section title="AI Document Scanning">
             <p>
-              When you use the AI scanning feature, your photo is uploaded to our
-              secure server for automatic data extraction. The server uses AI to
-              read printed clinical documents (biometry printouts, autokeratometry
-              sheets, etc.) and return structured measurements. Scanning is not
-              performed on your device — it requires an internet connection.
+              When you scan a clinical document, the image is uploaded to our
+              server and processed by a third-party AI provider to extract
+              structured measurements. An internet connection is required.
             </p>
             <p>
-              Our server processes images using AI services provided by Google
-              (Gemini) and Anthropic (Claude). Google Gemini is the primary
-              extraction engine; Anthropic Claude serves as a fallback. Per each
-              provider&rsquo;s API terms, inputs are not retained by the AI
-              provider beyond the duration of the extraction request and are not
-              used to train their models.
+              The app does not attach patient details to the request. Clinical
+              printouts may, however, contain identifiers that are visible in the
+              image itself. AI providers do not retain inputs beyond the request
+              and do not use them for training.
             </p>
             <p>
-              Only the image is transmitted to the AI providers — no patient
-              names, hospital numbers, or other identifying information is
-              included in the request.
-            </p>
-            <p>
-              After extraction, a copy of the image is retained on our server,
-              linked to your account, so we can monitor extraction accuracy and
-              debug problems. We delete older samples periodically and you may
-              request removal of your samples at any time — see &ldquo;Deleting
-              Your Data&rdquo; below.
-            </p>
-            <p>
-              By signing in and using the scanning feature, you consent to
-              AI-powered document processing and to the server-side retention
-              described above. You can stop using scanning at any time.
-            </p>
-          </Section>
-
-          <Section title="Data Sharing">
-            <p>
-              We do not sell, rent, or share your data with third parties.
+              A copy of each scan is retained on our server for quality
+              monitoring. Samples are deleted automatically 90 days after
+              capture, and immediately when you delete your account. To request
+              earlier removal of specific samples, contact{" "}
+              <a
+                href="mailto:support@phacotrack.com"
+                className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
+              >
+                support@phacotrack.com
+              </a>
+              .
             </p>
           </Section>
 
@@ -113,94 +87,51 @@ export default function PrivacyPage() {
             </p>
           </Section>
 
-          <Section title="Data Security">
-            <p>All network communication uses HTTPS/TLS encryption.</p>
+          <Section title="Security">
             <p>
               Authentication tokens are stored in the iOS Keychain with
-              &ldquo;when unlocked, this device only&rdquo; protection.
-            </p>
-            <p>Local data files are written with iOS file protection.</p>
-            <p>
-              Encrypted backups use AES-256 encryption with a password you set at
-              export time.
+              &ldquo;when unlocked, this device only&rdquo; protection. Local
+              data files use iOS file protection. Encrypted backup files use
+              AES-256 with a password you choose.
             </p>
           </Section>
 
-          <Section title="Deleting Your Data">
+          <Section title="Surgery Timer on the Lock Screen">
             <p>
-              You can delete all local patient data from Settings &rarr; Delete
-              All Patient Data.
+              If you start a surgery timer, the active patient&rsquo;s name,
+              hospital number, eye, and planned IOL appear on your device&rsquo;s
+              lock screen and Dynamic Island as part of the Live Activity, so you
+              can glance at the timer mid-procedure without unlocking the device.
             </p>
             <p>
-              If you have cloud sync enabled, you can delete your cloud account
-              from Settings &rarr; Account &rarr; Delete Account. This permanently
-              removes all server-side case data <em>and retained AI scan images</em>{" "}
-              associated with your account.
-            </p>
-            <p>
-              If you scanned documents without enabling cloud sync, or need to
-              remove samples without deleting your account, email us at{" "}
-              <a
-                href="mailto:support@phacotrack.com"
-                className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
-              >
-                support@phacotrack.com
-              </a>{" "}
-              with your account email and we will delete your samples on request.
-            </p>
-            <p>
-              Uninstalling the app removes all local data from your device.
+              This information is rendered on your device only and is never
+              transmitted. It remains visible until the timer is stopped or you
+              dismiss the Live Activity. You are responsible for the physical
+              security of your device while a timer is active.
             </p>
           </Section>
 
-          <Section title="Cross-Border Data Transfer">
+          <Section title="Cross-Border Transfer">
             <p>
-              If you enable cloud sync, your case data (with patient-identifiable
-              fields encrypted) is transmitted to and stored on cloud servers
-              located outside of Thailand, in the United States.
-            </p>
-            <p>
-              When you use AI document scanning, your image is processed via
-              Google&rsquo;s Gemini API or Anthropic&rsquo;s Claude API, which
-              may involve servers located in the United States.
-            </p>
-            <p>
-              By using these features, you consent to the transfer of data outside
-              your country of residence in accordance with Thailand&rsquo;s
-              Personal Data Protection Act (PDPA) and other applicable data
-              protection laws.
+              When you use cloud sync or AI scanning, your data is transmitted to
+              and processed on servers in the United States. By using these
+              features, you consent to this transfer.
             </p>
           </Section>
 
           <Section title="Your Rights">
             <p>
               You may request access to, correction of, or deletion of your
-              personal data at any time by contacting us or using the in-app
-              account deletion feature.
-            </p>
-            <p>
-              If you are in the European Economic Area, you have additional rights
-              under GDPR including data portability and the right to object to
-              processing. Contact us to exercise these rights.
-            </p>
-          </Section>
-
-          <Section title="Your Responsibilities">
-            <p>
-              PhacoTrack is a personal surgical logbook tool. It is not a
-              certified medical device or electronic health record system.
-            </p>
-            <p>
-              You are responsible for complying with your institution&rsquo;s data
-              governance policies and applicable regulations (e.g. HIPAA, GDPR,
-              PDPA) when recording patient information.
+              personal data at any time. Account deletion is available in-app.
+              If you live in the European Union, you have additional rights under
+              GDPR, including the right to receive your data in a portable format
+              and to object to certain uses of it.
             </p>
           </Section>
 
           <Section title="Contact">
             <p>
-              If you have questions about this privacy policy or your data,
-              contact us at{" "}
+              For questions about this policy or your data, contact{" "}
               <a
                 href="mailto:support@phacotrack.com"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
