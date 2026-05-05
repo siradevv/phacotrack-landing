@@ -88,6 +88,13 @@ export default function FinalCTA() {
             &copy; {new Date().getFullYear()} PhacoTrack
           </p>
         </div>
+
+        {/* Medical-device disclaimer — wording matches iOS Terms of Use */}
+        <div className="mx-auto mt-6 max-w-[1200px] px-6">
+          <p className="text-center text-[12px] leading-relaxed text-ink-faint md:text-left">
+            PhacoTrack is a personal surgical logbook. It is not a registered medical device or clinical decision-support tool.
+          </p>
+        </div>
       </footer>
     </>
   );

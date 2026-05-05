@@ -34,9 +34,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/app-icon-small.png" type="image/png" />
-      </head>
       <body className="bg-surface text-ink antialiased">{children}</body>
     </html>
   );
