@@ -4,7 +4,7 @@ import { monthlyPriceLabel, yearlyPriceLabel, yearlySavingsPercent } from "@/lib
 import { APP_STORE_URL } from "@/lib/links";
 
 const freeBullets = [
-  "Up to 20 cases",
+  "Up to 20 cases (lifetime)",
   "5 AI scans per day",
   "Basic analytics dashboard",
   "Works offline, always",
@@ -105,6 +105,17 @@ export default function Pricing() {
             >
               Start Free Trial
             </a>
+            <p className="mt-3 text-center text-[12px] leading-relaxed text-ink-faint">
+              Subscriptions auto-renew until cancelled. Trial converts to paid after 14 days. Cancel anytime in your Apple ID settings. By subscribing you agree to our{" "}
+              <a href="/terms" className="underline decoration-ink-faint/40 underline-offset-2 hover:text-ink-muted">
+                Terms
+              </a>
+              {" "}and{" "}
+              <a href="/privacy" className="underline decoration-ink-faint/40 underline-offset-2 hover:text-ink-muted">
+                Privacy Policy
+              </a>
+              .
+            </p>
           </div>
         </AnimateOnScroll>
       </div>
@@ -117,7 +128,7 @@ export default function Pricing() {
       </p>
 
       <p className="mt-3 text-center text-[13px] text-ink-faint">
-        Pricing in USD. Local pricing may vary. Cancel anytime.
+        Pricing in USD. Local pricing may vary.
       </p>
     </SectionWrapper>
   );

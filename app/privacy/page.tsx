@@ -46,9 +46,16 @@ export default function PrivacyPage() {
 
           <Section title="Account & Cloud Sync">
             <p>
-              Sign in with Apple is required. Your surgeon setup and case data
-              sync across your signed-in devices through our server. Cloud sync
-              beyond the free tier requires a Pro subscription.
+              Sign in with Apple is required. When you sign in, we receive
+              your Apple-issued user identifier and (if you choose to share it)
+              your name and email. We store an authentication token on the
+              server so you can stay signed in without re-entering credentials.
+            </p>
+            <p>
+              Cloud sync requires a Pro subscription. Free-tier data stays on
+              your device only and is never uploaded to our server. With Pro,
+              your surgeon setup and case data sync across your signed-in
+              devices through our server.
             </p>
             <p>
               Patient identity fields are stored on our server only in encrypted
@@ -62,17 +69,32 @@ export default function PrivacyPage() {
             </p>
           </Section>
 
+          <Section title="Subscriptions & Billing">
+            <p>
+              Subscriptions are processed by Apple through the App Store. Apple
+              shares a transaction record with us so we can confirm your Pro
+              status across your devices &mdash; this includes a unique
+              transaction identifier and an opaque account token tied to your
+              Apple ID. We do not receive your payment card details.
+            </p>
+            <p>
+              Subscription management (upgrade, downgrade, cancellation,
+              refund) is handled by Apple in your Apple ID settings.
+            </p>
+          </Section>
+
           <Section title="AI Document Scanning">
             <p>
               When you scan a clinical document, the image is uploaded to our
-              server and processed by a third-party AI provider to extract
-              structured measurements. An internet connection is required.
+              server and processed by Google (Gemini) for measurement
+              extraction, with Anthropic (Claude) as a backup if the primary
+              service is unavailable. An internet connection is required.
             </p>
             <p>
               The app does not attach patient details to the request. Clinical
-              printouts may, however, contain identifiers that are visible in the
-              image itself. AI providers do not retain inputs beyond the request
-              and do not use them for training.
+              printouts may, however, contain identifiers that are visible in
+              the image itself. Neither AI provider retains inputs beyond the
+              request, and neither uses them for training.
             </p>
             <p>
               A copy of each scan is retained on our server for quality
@@ -93,11 +115,41 @@ export default function PrivacyPage() {
             <p>
               PhacoTrack collects anonymous usage analytics, such as which
               screens are opened or whether a feature was used, to help us
-              improve the app. Analytics are processed by a third-party service
-              that never receives patient data, case content, free text, or
+              improve the app. Analytics are processed by TelemetryDeck, which
+              never receives patient data, case content, free text, or
               personally identifying information. No advertising identifiers or
               persistent user IDs are used. You can opt out in Settings.
             </p>
+          </Section>
+
+          <Section title="Third-Party Processors">
+            <p>
+              We rely on a small number of services to operate PhacoTrack.
+              Each only receives the data it needs for its specific purpose:
+            </p>
+            <ul className="ml-5 list-disc space-y-2">
+              <li>
+                <strong>Apple</strong> &mdash; Sign in with Apple
+                (authentication), the App Store (subscriptions), and iCloud
+                Calendar (if you enable calendar integration).
+              </li>
+              <li>
+                <strong>Railway (United States)</strong> &mdash; hosts our
+                server and database.
+              </li>
+              <li>
+                <strong>Google</strong> &mdash; processes scan images for
+                measurement extraction (Gemini).
+              </li>
+              <li>
+                <strong>Anthropic</strong> &mdash; processes scan images as a
+                backup when Google is unavailable (Claude).
+              </li>
+              <li>
+                <strong>TelemetryDeck</strong> &mdash; receives anonymous
+                usage analytics.
+              </li>
+            </ul>
           </Section>
 
           <Section title="Security">
