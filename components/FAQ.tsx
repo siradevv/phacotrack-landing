@@ -6,7 +6,7 @@ import SectionWrapper from "./SectionWrapper";
 const faqs = [
   {
     q: "Does PhacoTrack work offline?",
-    a: "Yes. PhacoTrack is offline-first \u2014 all your data is stored locally on your device. You can log cases and view analytics without internet. Cloud sync (Pro) happens automatically when you reconnect.",
+    a: "Mostly. Logging cases by hand, browsing past cases, and viewing analytics all work without internet \u2014 your data is stored locally on your iPhone. The two features that need a connection are AI document scanning (the photo is sent to our server for extraction) and Pro cloud sync (queues automatically and uploads when you reconnect).",
   },
   {
     q: "Which biometry devices are supported?",

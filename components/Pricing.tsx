@@ -7,7 +7,7 @@ const freeBullets = [
   "Up to 20 cases (lifetime)",
   "5 AI scans per day",
   "Basic analytics dashboard",
-  "Works offline, always",
+  "Your case data stays on-device",
 ];
 
 const proBullets = [

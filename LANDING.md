@@ -51,7 +51,7 @@ landing/
     ├── Features.tsx            # 4 alternating feature cards with device mockups
     ├── Comparison.tsx          # PhacoTrack vs Paper/Generic/Enterprise table
     ├── BuiltBy.tsx             # "Built by ophthalmologists" credibility section
-    ├── Privacy.tsx             # 4 trust cards (AES-256, Face ID, Offline, PDPA)
+    ├── Privacy.tsx             # 4 trust cards (AES-256, Face ID, Local-first, PDPA)
     ├── Pricing.tsx             # Free vs Pro tier cards
     ├── FAQ.tsx                 # 6-question accordion ('use client')
     ├── FinalCTA.tsx            # Bottom CTA + App Store badge + footer
