@@ -17,7 +17,6 @@ const proBullets = [
   "SIA calculator with polar plots",
   "CSV & PDF export",
   "Encrypted cloud backup & sync",
-  "14-day free trial",
 ];
 
 function CheckIcon({ className = "" }: { className?: string }) {
@@ -39,7 +38,7 @@ export default function Pricing() {
           Start free. Upgrade when you&apos;re ready.
         </h2>
         <p className="mt-4 text-[1.05rem] leading-relaxed text-ink-muted">
-          No credit card required. No commitment. Just better outcomes.
+          Cancel anytime. Your case data stays yours.
         </p>
       </div>
 
@@ -48,7 +47,7 @@ export default function Pricing() {
         <AnimateOnScroll>
           <div className="flex h-full flex-col rounded-2xl border border-line bg-surface px-7 py-8">
             <h3 className="text-xl font-bold text-ink">Free</h3>
-            <p className="mt-1 text-[14px] text-ink-muted">Perfect for getting started</p>
+            <p className="mt-1 text-[14px] text-ink-muted">For your first 20 cases</p>
             <div className="mt-4 flex items-baseline gap-1">
               <span className="text-[2.5rem] font-bold leading-none text-ink">$0</span>
               <span className="text-[15px] text-ink-muted">forever</span>
@@ -106,7 +105,7 @@ export default function Pricing() {
               Start Free Trial
             </a>
             <p className="mt-3 text-center text-[12px] leading-relaxed text-ink-faint">
-              Subscriptions auto-renew until cancelled. Trial converts to paid after 14 days. Cancel anytime in your Apple ID settings. By subscribing you agree to our{" "}
+              Auto-renews until cancelled in your Apple ID settings. Trial converts to paid after 14 days. By subscribing you agree to our{" "}
               <a href="/terms" className="underline decoration-ink-faint/40 underline-offset-2 hover:text-ink-muted">
                 Terms
               </a>
@@ -120,14 +119,7 @@ export default function Pricing() {
         </AnimateOnScroll>
       </div>
 
-      {/* Price anchoring — enterprise comparison */}
-      <p className="mt-10 text-center text-[14px] text-ink-muted">
-        Enterprise surgical audit systems cost $274&ndash;$9,000/month per surgeon.
-        <br className="hidden sm:block" />
-        {" "}PhacoTrack gives you personal outcomes tracking for less than a coffee a week.
-      </p>
-
-      <p className="mt-3 text-center text-[13px] text-ink-faint">
+      <p className="mt-10 text-center text-[13px] text-ink-faint">
         Pricing in USD. Local pricing may vary.
       </p>
     </SectionWrapper>

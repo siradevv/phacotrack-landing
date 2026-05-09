@@ -5,16 +5,16 @@ import SectionWrapper from "./SectionWrapper";
 
 const faqs = [
   {
+    q: "Is PhacoTrack a medical device?",
+    a: "No. PhacoTrack is a personal outcomes tracker for individual surgeons to review their own surgical data. It is not a regulated medical device and does not provide diagnostic or treatment recommendations. All clinical decisions remain with the operating surgeon.",
+  },
+  {
     q: "Does PhacoTrack work offline?",
-    a: "Mostly. Logging cases by hand, browsing past cases, and viewing analytics all work without internet \u2014 your data is stored locally on your iPhone. The two features that need a connection are AI document scanning (the photo is sent to our server for extraction) and Pro cloud sync (queues automatically and uploads when you reconnect).",
+    a: "Yes. Case logging, browsing, and analytics all work fully offline \u2014 your data lives on your iPhone. Only AI scanning (photo \u2192 server for extraction) and Pro cloud sync need a connection. Sync queues automatically and uploads when you reconnect.",
   },
   {
     q: "Which biometry devices are supported?",
-    a: "PhacoTrack\u2019s AI scanning works with printouts from any optical biometer (IOLMaster, Lenstar, Pentacam AXL, and more) and immersion A-scan devices. It also extracts data from autokeratometry, specular microscopy (ECC), and phaco machine summary printouts.",
-  },
-  {
-    q: "How fast is case logging?",
-    a: "Under 30 seconds for most cases. Smart defaults pre-fill your preferred IOL model, formula, and surgical technique. Biometry data auto-populates from AI scans. You just confirm and save.",
+    a: "Any of them. PhacoTrack\u2019s AI scanning works with printouts from any biometry \u2014 optical or immersion. It also extracts data from autokeratometry, specular microscopy (ECC), and phaco machine summary printouts.",
   },
   {
     q: "Is my patient data safe?",
@@ -30,11 +30,11 @@ const faqs = [
   },
   {
     q: "How is PhacoTrack different from IOL calculators?",
-    a: "IOL calculators help you pick a lens for one patient. PhacoTrack tracks your outcomes across all patients \u2014 so you can see your real prediction accuracy, optimise your A-constant from your own surgical data, analyse your SIA, and monitor your complication rate over time.",
+    a: "IOL calculators help you pick a lens for one patient. PhacoTrack tracks your outcomes across all patients \u2014 so you can see your real prediction accuracy, optimise your personal IOL constants from your own surgical data, analyse your SIA, and monitor your complication rate over time.",
   },
   {
-    q: "What\u2019s included in the free tier?",
-    a: "Up to 20 cases total (lifetime, not per month), 5 AI scans per day, and a basic analytics dashboard. The free tier never expires and doesn\u2019t require a credit card. Upgrade to Pro when you want unlimited cases, full analytics, export, and cloud sync.",
+    q: "What happens to my data if I cancel Pro?",
+    a: "Your existing cases stay on your device \u2014 nothing is deleted. Cancelling stops cloud sync and turns off Pro-only features (full analytics, export, SIA polar plots), but you keep full access to every case you\u2019ve already logged. Re-subscribing picks up where you left off.",
   },
 ];
 

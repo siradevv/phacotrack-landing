@@ -8,7 +8,7 @@ const features = [
     bullets: [
       "Biometry: AL, K1, K2, ACD, LT, WTW, CCT, and full IOL tables",
       "Also scans autokeratometry, specular microscopy, and phaco summaries",
-      "Supports all major optical and immersion biometers",
+      "Supports all major optical and immersion biometry",
     ],
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
