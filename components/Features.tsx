@@ -112,7 +112,7 @@ export default function Features() {
       <div className="mx-auto mt-14 grid max-w-4xl gap-4 md:grid-cols-2">
         {features.map((feature, i) => (
           <AnimateOnScroll key={feature.title} delay={i * 60}>
-            <div className="flex h-full flex-col rounded-2xl border border-line bg-surface p-6 transition-shadow hover:shadow-md">
+            <div className="flex h-full flex-col rounded-2xl border border-line bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
                   {feature.icon}

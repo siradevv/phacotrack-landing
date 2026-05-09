@@ -45,7 +45,7 @@ export default function Pricing() {
       <div className="mx-auto mt-12 grid max-w-3xl gap-6 md:grid-cols-2">
         {/* Free tier */}
         <AnimateOnScroll>
-          <div className="flex h-full flex-col rounded-2xl border border-line bg-surface px-7 py-8">
+          <div className="flex h-full flex-col rounded-2xl border border-line bg-surface px-7 py-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <h3 className="text-xl font-bold text-ink">Free</h3>
             <p className="mt-1 text-[14px] text-ink-muted">For your first 20 cases</p>
             <div className="mt-4 flex items-baseline gap-1">
@@ -71,7 +71,7 @@ export default function Pricing() {
 
         {/* Pro tier */}
         <AnimateOnScroll delay={120}>
-          <div className="relative flex h-full flex-col rounded-2xl border-2 border-accent bg-surface px-7 py-8 shadow-[0_8px_30px_-8px_rgba(42,122,223,0.15)]">
+          <div className="relative flex h-full flex-col rounded-2xl border-2 border-accent bg-surface px-7 py-8 shadow-[0_8px_30px_-8px_rgba(42,122,223,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-8px_rgba(42,122,223,0.28)]">
             <div className="absolute -top-3.5 right-6 rounded-full bg-accent px-4 py-1 text-[12px] font-semibold text-white">
               Most Popular
             </div>

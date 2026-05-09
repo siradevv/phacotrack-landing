@@ -77,7 +77,7 @@ export default function Trust() {
       <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {trustPoints.map((point, i) => (
           <AnimateOnScroll key={point.title} delay={i * 80}>
-            <div className="flex items-start gap-4 rounded-2xl border border-line bg-surface px-5 py-6">
+            <div className="flex items-start gap-4 rounded-2xl border border-line bg-surface px-5 py-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
                 {point.icon}
               </div>

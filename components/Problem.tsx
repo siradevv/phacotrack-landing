@@ -23,7 +23,7 @@ export default function Problem() {
       <div className="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-[1fr_auto_1fr]">
         {/* Group 1: Manual trackers */}
         <AnimateOnScroll>
-          <div className="rounded-2xl border border-line bg-surface p-8">
+          <div className="rounded-2xl border border-line bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -69,7 +69,7 @@ export default function Problem() {
 
         {/* Group 2: Non-trackers */}
         <AnimateOnScroll delay={150}>
-          <div className="rounded-2xl border border-line bg-surface p-8">
+          <div className="rounded-2xl border border-line bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
