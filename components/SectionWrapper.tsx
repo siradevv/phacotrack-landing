@@ -14,7 +14,7 @@ export default function SectionWrapper({
   return (
     <section
       id={id}
-      className={`py-20 md:py-28 ${alt ? "bg-surface-alt" : "bg-surface"} ${className}`}
+      className={`py-20 md:py-28 ${className}`}
     >
       <div className="mx-auto max-w-[1200px] px-6">
         <AnimateOnScroll>{children}</AnimateOnScroll>

@@ -8,7 +8,7 @@ export default function FinalCTA() {
       {/* CTA Section */}
       <section
         id="download"
-        className="bg-gradient-to-b from-surface to-accent-light py-20 md:py-28"
+        className="py-20 md:py-28"
       >
         <div className="mx-auto max-w-[1200px] px-6">
           <AnimateOnScroll>

@@ -18,12 +18,7 @@ function AppStoreBadge() {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-accent-light to-surface pt-28 pb-16 md:pt-36 md:pb-24">
-      {/* Decorative background — soft radial glows for depth */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -left-32 h-[460px] w-[460px] rounded-full bg-accent/20 blur-3xl" />
-        <div className="absolute top-32 -right-24 h-[380px] w-[380px] rounded-full bg-positive/12 blur-3xl" />
-      </div>
+    <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
       <div className="relative mx-auto max-w-[1200px] px-6">
         <div className="flex flex-col items-center gap-12 md:flex-row md:gap-16 lg:gap-20">
           {/* Text */}

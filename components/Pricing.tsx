@@ -29,7 +29,7 @@ function CheckIcon({ className = "" }: { className?: string }) {
 
 export default function Pricing() {
   return (
-    <SectionWrapper id="pricing">
+    <SectionWrapper id="pricing" alt>
       <div className="mx-auto max-w-3xl text-center">
         <p className="mb-3 text-[13px] font-semibold tracking-[0.15em] text-accent uppercase">
           Pricing

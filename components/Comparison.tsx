@@ -49,12 +49,39 @@ export default function Comparison() {
         </h2>
       </div>
 
-      <p className="mt-8 text-center text-[13px] text-ink-faint md:hidden">Swipe to compare &rarr;</p>
-      <div className="mx-auto mt-2 max-w-4xl -mx-6 overflow-x-auto px-6 md:mt-12">
-        <table className="w-full min-w-[640px] border-collapse">
+      {/* Mobile: stacked feature cards */}
+      <div className="mx-auto mt-10 max-w-md space-y-3 md:hidden">
+        {rows.map((row) => (
+          <div key={row.feature} className="rounded-2xl border border-line bg-surface p-5">
+            <h3 className="text-[15px] font-semibold text-ink">{row.feature}</h3>
+            <dl className="mt-3 space-y-2 text-[13px]">
+              <div className="flex items-center justify-between">
+                <dt className="text-ink-muted">Paper / Excel</dt>
+                <dd><CellContent value={row.paper} /></dd>
+              </div>
+              <div className="flex items-center justify-between">
+                <dt className="text-ink-muted">Generic Apps</dt>
+                <dd><CellContent value={row.generic} /></dd>
+              </div>
+              <div className="flex items-center justify-between">
+                <dt className="text-ink-muted">Enterprise</dt>
+                <dd><CellContent value={row.enterprise} /></dd>
+              </div>
+              <div className="-mx-2 mt-2 flex items-center justify-between rounded-lg bg-accent/5 px-3 py-2">
+                <dt className="font-semibold text-accent">PhacoTrack</dt>
+                <dd><CellContent value={row.phacotrack} highlight /></dd>
+              </div>
+            </dl>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop: comparison table */}
+      <div className="mx-auto mt-12 hidden max-w-4xl md:block">
+        <table className="w-full border-collapse">
           <thead>
             <tr className="border-b border-line">
-              <th className="sticky left-0 z-10 bg-surface-alt py-4 pr-4 text-left text-[13px] font-semibold text-ink-muted">
+              <th className="py-4 pr-4 text-left text-[13px] font-semibold text-ink-muted">
                 Feature
               </th>
               <th className="px-4 py-4 text-center text-[13px] font-medium text-ink-muted">
@@ -74,7 +101,7 @@ export default function Comparison() {
           <tbody>
             {rows.map((row, i) => (
               <tr key={row.feature} className="border-b border-line/50">
-                <td className="sticky left-0 z-10 bg-surface-alt py-3.5 pr-4 text-[14px] font-medium text-ink">
+                <td className="py-3.5 pr-4 text-[14px] font-medium text-ink">
                   {row.feature}
                 </td>
                 <td className="px-4 py-3.5 text-center">

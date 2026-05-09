@@ -25,7 +25,7 @@ const screens = [
 
 export default function AppTour() {
   return (
-    <section className="bg-surface-alt py-20 md:py-28">
+    <section className="py-20 md:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
         <AnimateOnScroll>
           <div className="mx-auto max-w-2xl text-center">

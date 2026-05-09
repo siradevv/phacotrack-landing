@@ -50,7 +50,13 @@ html {
 body {
   font-family: var(--font-family-sans);
   color: var(--color-ink);
-  background-color: var(--color-surface);
+  background: linear-gradient(
+    180deg,
+    var(--color-accent-light) 0%,
+    var(--color-surface) 30%,
+    var(--color-surface) 70%,
+    var(--color-accent-light) 100%
+  );
 }
 
 /* Scroll offset for sticky nav */
