@@ -1,5 +1,4 @@
 import SectionWrapper from "./SectionWrapper";
-import { monthlyPriceLabel } from "@/lib/pricing";
 
 function Check({ highlight = false }: { highlight?: boolean }) {
   return (
@@ -19,15 +18,13 @@ function Cross() {
 
 const rows = [
   { feature: "Cataract-specific fields", paper: false, generic: false, enterprise: true, phacotrack: true },
-  { feature: "Mobile-first", paper: false, generic: "Partial", enterprise: false, phacotrack: true },
-  { feature: "AI biometry scanning", paper: false, generic: false, enterprise: "Own devices", phacotrack: "Any device" },
+  { feature: "AI scan extraction", paper: false, generic: false, enterprise: "Own devices", phacotrack: "Any device" },
+  { feature: "Case entry < 30 seconds", paper: false, generic: false, enterprise: false, phacotrack: true },
   { feature: "Personal IOL constants", paper: false, generic: false, enterprise: "Some", phacotrack: true },
   { feature: "SIA analysis", paper: false, generic: false, enterprise: "Some", phacotrack: "Built-in" },
-  { feature: "Case entry < 30 seconds", paper: false, generic: false, enterprise: false, phacotrack: true },
-  { feature: "Local-first storage", paper: "N/A", generic: "Varies", enterprise: false, phacotrack: true },
+  { feature: "Mobile-first", paper: false, generic: "Partial", enterprise: false, phacotrack: true },
   { feature: "CSV & PDF export", paper: false, generic: "Basic", enterprise: true, phacotrack: true },
   { feature: "Hardware lock-in", paper: "N/A", generic: "N/A", enterprise: "Yes", phacotrack: "None" },
-  { feature: "Price per surgeon", paper: "Free", generic: "$3\u201310/mo", enterprise: "$274\u20139k/mo", phacotrack: `Free\u2013${monthlyPriceLabel}/mo` },
 ];
 
 function CellContent({ value, highlight = false }: { value: boolean | string; highlight?: boolean }) {
@@ -48,7 +45,7 @@ export default function Comparison() {
           Why PhacoTrack
         </p>
         <h2 className="text-[1.9rem] leading-tight font-bold tracking-tight text-ink md:text-[2.25rem]">
-          The only tool built specifically for cataract surgeons.
+          Spreadsheet simple. Enterprise capable.
         </h2>
       </div>
 
