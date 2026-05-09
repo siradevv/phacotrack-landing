@@ -1,9 +1,11 @@
 export default function DeviceFrame({
   children,
   className = "",
+  hideDynamicIsland = false,
 }: {
   children: React.ReactNode;
   className?: string;
+  hideDynamicIsland?: boolean;
 }) {
   return (
     <div className={`relative inline-block ${className}`}>
@@ -11,13 +13,13 @@ export default function DeviceFrame({
       <div className="relative rounded-[3rem] border-[12px] border-[#1a1a1a] bg-[#1a1a1a] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.25)] dark:shadow-[0_25px_60px_-12px_rgba(0,0,0,0.6)]">
         {/* Screen */}
         <div className="relative aspect-[393/852] w-[260px] overflow-hidden rounded-[2.25rem] bg-white md:w-[290px]">
-          {/* Dynamic Island */}
-          <div className="absolute top-3 left-1/2 z-20 h-[28px] w-[100px] -translate-x-1/2 rounded-full bg-[#1a1a1a]" />
+          {/* Dynamic Island — hidden when the screen content already includes one (real screenshots) */}
+          {!hideDynamicIsland && (
+            <div className="absolute top-3 left-1/2 z-20 h-[28px] w-[100px] -translate-x-1/2 rounded-full bg-[#1a1a1a]" />
+          )}
 
           {/* Screen content */}
           <div className="relative h-full w-full">{children}</div>
-
-{/* No home indicator — cleaner look */}
         </div>
       </div>
 
