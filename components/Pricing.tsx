@@ -12,7 +12,7 @@ const freeBullets = [
 
 const proBullets = [
   "Unlimited cases",
-  "Unlimited AI scanning",
+  "AI scanning from any printout",
   "Full analytics (6 modules + benchmarks)",
   "SIA calculator with polar plots",
   "CSV & PDF export",
