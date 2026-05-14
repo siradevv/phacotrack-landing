@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const SITE_URL = "https://phacotrack.com";
@@ -69,6 +70,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationLd) }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
