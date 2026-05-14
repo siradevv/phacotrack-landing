@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { US_MONTHLY_USD, US_YEARLY_USD } from "@/lib/pricing";
 
 const SITE_URL = "https://phacotrack.com";
 
@@ -43,11 +44,29 @@ const softwareApplicationLd = {
   description:
     "Personal cataract surgery outcomes tracker for ophthalmologists. AI-powered biometry scanning, analytics dashboard, and SIA analysis.",
   url: SITE_URL,
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
+  // Free download + two Pro subscription tiers. Prices are US App Store
+  // USD, sourced from lib/pricing.ts so they track the single source of
+  // truth; other regions auto-localise on-device via StoreKit.
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Free",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    {
+      "@type": "Offer",
+      name: "Pro Monthly",
+      price: US_MONTHLY_USD.toFixed(2),
+      priceCurrency: "USD",
+    },
+    {
+      "@type": "Offer",
+      name: "Pro Yearly",
+      price: US_YEARLY_USD.toFixed(2),
+      priceCurrency: "USD",
+    },
+  ],
   publisher: {
     "@type": "Organization",
     name: "PhacoTrack",

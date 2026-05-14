@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import AnimateOnScroll from "./AnimateOnScroll";
 import { APP_STORE_URL } from "@/lib/links";
 
@@ -72,12 +73,12 @@ export default function FinalCTA() {
 
           {/* Links */}
           <div className="flex flex-wrap justify-center gap-6 text-[14px] text-ink-muted">
-            <a href="/privacy" className="transition-colors hover:text-ink">
+            <Link href="/privacy" className="transition-colors hover:text-ink">
               Privacy Policy
-            </a>
-            <a href="/terms" className="transition-colors hover:text-ink">
-              Terms of Use
-            </a>
+            </Link>
+            <Link href="/terms" className="transition-colors hover:text-ink">
+              Terms of Service
+            </Link>
             <a
               href="mailto:support@phacotrack.com"
               className="transition-colors hover:text-ink"
@@ -92,7 +93,7 @@ export default function FinalCTA() {
           </p>
         </div>
 
-        {/* Medical-device disclaimer — wording matches iOS Terms of Use */}
+        {/* Medical-device disclaimer — wording matches iOS Terms of Service */}
         <div className="mx-auto mt-6 max-w-[1200px] px-6">
           <p className="text-center text-[12px] leading-relaxed text-ink-faint md:text-left">
             PhacoTrack is a personal surgical logbook. It is not a registered medical device or clinical decision-support tool.

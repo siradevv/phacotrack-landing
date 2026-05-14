@@ -54,7 +54,7 @@ export default function Hero() {
 
           {/* Device mockup */}
           <AnimateOnScroll delay={200} className="flex-shrink-0">
-            <div className="rotate-[2deg] transition-transform duration-500 hover:rotate-0">
+            <div className="rotate-[2deg] transition-transform duration-500 hover:rotate-0 motion-reduce:rotate-0">
               <DeviceFrame hideDynamicIsland>
                 <Image
                   src="/screenshots/insights.png"
