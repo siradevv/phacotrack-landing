@@ -8,7 +8,7 @@ const SITE_URL = "https://phacotrack.com";
 export const metadata: Metadata = {
   title: "PhacoTrack — Personal Cataract Surgery Outcomes Tracker",
   description:
-    "Track your cataract surgery outcomes with AI-powered biometry scanning, personal analytics, IOL constant optimisation, and SIA analysis. Built by ophthalmologists. Free to start.",
+    "Cataract surgery outcomes tracker for ophthalmologists. AI biometry scanning, personal analytics, IOL constant optimisation, SIA analysis. Free to start.",
   keywords: [
     "cataract surgery outcomes",
     "surgical logbook",
