@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { APP_STORE_URL } from "@/lib/links";
 
@@ -13,12 +13,30 @@ const links = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const firstMenuItemRef = useRef<HTMLAnchorElement | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    firstMenuItemRef.current?.focus();
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      document.removeEventListener("keydown", onKey);
+      triggerRef.current?.focus();
+    };
+  }, [menuOpen]);
 
   return (
     <nav
@@ -64,9 +82,12 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="relative z-50 flex h-10 w-10 items-center justify-center md:hidden"
+          ref={triggerRef}
+          className="relative z-50 flex h-11 w-11 items-center justify-center md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           <div className="flex w-5 flex-col gap-[5px]">
             <span
@@ -90,11 +111,18 @@ export default function Navbar() {
 
       {/* Mobile menu overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-surface/95 backdrop-blur-xl md:hidden">
-          {links.map((link) => (
+        <div
+          id="mobile-menu"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Site navigation"
+          className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-surface/95 backdrop-blur-xl md:hidden"
+        >
+          {links.map((link, i) => (
             <a
               key={link.href}
               href={link.href}
+              ref={i === 0 ? firstMenuItemRef : undefined}
               className="text-2xl font-semibold text-ink"
               onClick={() => setMenuOpen(false)}
             >

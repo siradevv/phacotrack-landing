@@ -25,12 +25,21 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "PhacoTrack",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "PhacoTrack — cataract surgery outcomes tracker",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "PhacoTrack — Know your numbers. Improve your surgery.",
     description:
       "Personal analytics dashboard for cataract surgeons. AI-powered biometry scanning, IOL constant optimisation, and SIA analysis.",
+    images: ["/opengraph-image"],
   },
   metadataBase: new URL(SITE_URL),
 };
@@ -53,18 +62,21 @@ const softwareApplicationLd = {
       name: "Free",
       price: "0",
       priceCurrency: "USD",
+      eligibleRegion: { "@type": "Country", name: "US" },
     },
     {
       "@type": "Offer",
       name: "Pro Monthly",
       price: US_MONTHLY_USD.toFixed(2),
       priceCurrency: "USD",
+      eligibleRegion: { "@type": "Country", name: "US" },
     },
     {
       "@type": "Offer",
       name: "Pro Yearly",
       price: US_YEARLY_USD.toFixed(2),
       priceCurrency: "USD",
+      eligibleRegion: { "@type": "Country", name: "US" },
     },
   ],
   publisher: {
@@ -80,7 +92,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ colorScheme: "light dark" }}>
       <body className="bg-surface text-ink antialiased">
         <script
           type="application/ld+json"

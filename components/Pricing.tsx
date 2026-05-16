@@ -102,15 +102,15 @@ export default function Pricing() {
               href={APP_STORE_URL}
               className="mt-8 block rounded-xl bg-accent py-3 text-center text-[15px] font-semibold text-white transition-opacity hover:opacity-90"
             >
-              Start Free Trial
+              Get Pro
             </a>
             <p className="mt-3 text-center text-[12px] leading-relaxed text-ink-faint">
-              Auto-renews until cancelled in your Apple ID settings. Trial converts to paid after 14 days. By subscribing you agree to our{" "}
-              <a href="/terms" className="underline decoration-ink-faint/40 underline-offset-2 hover:text-ink-muted">
+              New monthly subscribers get a 14-day free trial. Auto-renews until cancelled in your Apple ID settings (at least 24 hours before renewal). By subscribing you agree to our{" "}
+              <a href="/terms" className="underline decoration-ink-faint/60 underline-offset-2 hover:text-ink-muted">
                 Terms
               </a>
               {" "}and{" "}
-              <a href="/privacy" className="underline decoration-ink-faint/40 underline-offset-2 hover:text-ink-muted">
+              <a href="/privacy" className="underline decoration-ink-faint/60 underline-offset-2 hover:text-ink-muted">
                 Privacy Policy
               </a>
               .

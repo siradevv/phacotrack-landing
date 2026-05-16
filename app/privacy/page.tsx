@@ -179,9 +179,10 @@ export default function PrivacyPage() {
           <Section title="Calendar Integration">
             <p>
               If you enable calendar integration in Settings, PhacoTrack creates
-              surgery and follow-up events in your iOS Calendar. These events
-              include the patient&rsquo;s name and hospital number so each entry
-              is recognisable at a glance.
+              surgery and follow-up events in your iOS Calendar. Each event
+              title contains the patient&rsquo;s name so the entry is
+              recognisable at a glance. Hospital numbers, dates of birth and
+              clinical content are not written into calendar entries.
             </p>
             <p>
               Calendar data is managed by iOS. If you have iCloud Calendar

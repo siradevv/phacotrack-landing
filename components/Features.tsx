@@ -77,9 +77,9 @@ const features = [
     title: "Cloud Sync",
     description: "Encrypted backup across all your devices.",
     bullets: [
-      "AES-256 encryption for all patient identifiers",
+      "Patient identifiers encrypted on-device with AES-256 before upload",
       "Syncs automatically in the background",
-      "Only your Apple ID can decrypt your data",
+      "Encryption keys are tied to your Apple account",
     ],
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
