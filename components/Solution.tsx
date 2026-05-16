@@ -30,9 +30,10 @@ export default function Solution() {
             </p>
             <div className="mt-7 flex justify-center">
               <a href={APP_STORE_URL} aria-label="Download on the App Store">
+                {/* alt="" — parent <a> already carries the same phrase as aria-label. */}
                 <Image
                   src="/app-store-badge.svg"
-                  alt="Download on the App Store"
+                  alt=""
                   width={152}
                   height={48}
                   className="h-[48px] w-auto"

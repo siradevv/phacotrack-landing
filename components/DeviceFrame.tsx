@@ -2,15 +2,27 @@ export default function DeviceFrame({
   children,
   className = "",
   hideDynamicIsland = false,
+  ariaLabel,
 }: {
   children: React.ReactNode;
   className?: string;
   hideDynamicIsland?: boolean;
+  /** Screen-reader label for the whole mockup. When set, the wrapper
+   * announces as a single image and the inner screenshot is hidden from
+   * assistive tech (avoids navigating through the bezel/Dynamic Island
+   * scaffolding to reach the screenshot's own alt text). */
+  ariaLabel?: string;
 }) {
+  const a11yProps = ariaLabel
+    ? { role: "img" as const, "aria-label": ariaLabel }
+    : {};
   return (
-    <div className={`relative inline-block ${className}`}>
+    <div className={`relative inline-block ${className}`} {...a11yProps}>
       {/* Outer bezel */}
-      <div className="relative rounded-[3rem] border-[12px] border-[#1a1a1a] bg-[#1a1a1a] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.25)] dark:shadow-[0_25px_60px_-12px_rgba(0,0,0,0.6)]">
+      <div
+        className="relative rounded-[3rem] border-[12px] border-[#1a1a1a] bg-[#1a1a1a] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.25)] dark:shadow-[0_25px_60px_-12px_rgba(0,0,0,0.6)]"
+        aria-hidden={ariaLabel ? "true" : undefined}
+      >
         {/* Screen */}
         <div className="relative aspect-[393/852] w-[260px] overflow-hidden rounded-[2.25rem] bg-white md:w-[290px]">
           {/* Dynamic Island — hidden when the screen content already includes one (real screenshots) */}
@@ -24,10 +36,22 @@ export default function DeviceFrame({
       </div>
 
       {/* Side buttons */}
-      <div className="absolute top-[100px] -right-[2px] h-[52px] w-[3px] rounded-r-sm bg-[#2a2a2a]" />
-      <div className="absolute top-[85px] -left-[2px] h-[28px] w-[3px] rounded-l-sm bg-[#2a2a2a]" />
-      <div className="absolute top-[125px] -left-[2px] h-[46px] w-[3px] rounded-l-sm bg-[#2a2a2a]" />
-      <div className="absolute top-[180px] -left-[2px] h-[46px] w-[3px] rounded-l-sm bg-[#2a2a2a]" />
+      <div
+        className="absolute top-[100px] -right-[2px] h-[52px] w-[3px] rounded-r-sm bg-[#2a2a2a]"
+        aria-hidden={ariaLabel ? "true" : undefined}
+      />
+      <div
+        className="absolute top-[85px] -left-[2px] h-[28px] w-[3px] rounded-l-sm bg-[#2a2a2a]"
+        aria-hidden={ariaLabel ? "true" : undefined}
+      />
+      <div
+        className="absolute top-[125px] -left-[2px] h-[46px] w-[3px] rounded-l-sm bg-[#2a2a2a]"
+        aria-hidden={ariaLabel ? "true" : undefined}
+      />
+      <div
+        className="absolute top-[180px] -left-[2px] h-[46px] w-[3px] rounded-l-sm bg-[#2a2a2a]"
+        aria-hidden={ariaLabel ? "true" : undefined}
+      />
     </div>
   );
 }

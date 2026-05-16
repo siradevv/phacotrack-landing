@@ -26,9 +26,10 @@ export default function FinalCTA() {
               </p>
               <div className="mt-8 flex justify-center">
                 <a href={APP_STORE_URL} aria-label="Download on the App Store">
+                  {/* alt="" — parent <a> already carries the same phrase as aria-label. */}
                   <Image
                     src="/app-store-badge.svg"
-                    alt="Download on the App Store"
+                    alt=""
                     width={165}
                     height={52}
                     className="h-[52px] w-auto"

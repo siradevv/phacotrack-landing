@@ -4,10 +4,13 @@ import AnimateOnScroll from "./AnimateOnScroll";
 import { APP_STORE_URL } from "@/lib/links";
 
 function AppStoreBadge() {
+  // alt="" because the parent <a> already carries aria-label="Download on
+  // the App Store" — leaving both would make VoiceOver announce the link
+  // and the image with the same phrase back-to-back.
   return (
     <Image
       src="/app-store-badge.svg"
-      alt="Download on the App Store"
+      alt=""
       width={140}
       height={44}
       priority
@@ -55,10 +58,13 @@ export default function Hero() {
           {/* Device mockup */}
           <AnimateOnScroll delay={200} className="flex-shrink-0">
             <div className="rotate-[2deg] transition-transform duration-500 hover:rotate-0 motion-reduce:rotate-0">
-              <DeviceFrame hideDynamicIsland>
+              <DeviceFrame
+                hideDynamicIsland
+                ariaLabel="PhacoTrack Insights dashboard showing refractive outcomes, visual outcomes, and SIA analysis"
+              >
                 <Image
                   src="/screenshots/insights.png"
-                  alt="PhacoTrack Insights dashboard showing refractive outcomes, visual outcomes, and SIA analysis"
+                  alt=""
                   width={1320}
                   height={2868}
                   priority

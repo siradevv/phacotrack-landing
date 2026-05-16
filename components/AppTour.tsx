@@ -45,10 +45,10 @@ export default function AppTour() {
           {screens.map((screen, i) => (
             <AnimateOnScroll key={screen.src} delay={i * 120}>
               <div className="flex flex-col items-center gap-5 text-center">
-                <DeviceFrame hideDynamicIsland>
+                <DeviceFrame hideDynamicIsland ariaLabel={screen.alt}>
                   <Image
                     src={screen.src}
-                    alt={screen.alt}
+                    alt=""
                     width={1320}
                     height={2868}
                     loading="lazy"
