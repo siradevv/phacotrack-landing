@@ -23,7 +23,7 @@ const features = [
     bullets: [
       "Refractive accuracy, visual outcomes, complication rates, and more",
       "SIA analysis with polar plots",
-      "Compare against published benchmarks (RCOphth, UK NOD)",
+      "Context from published benchmarks (RCOphth, UK NOD)",
     ],
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

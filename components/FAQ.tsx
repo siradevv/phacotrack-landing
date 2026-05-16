@@ -70,12 +70,16 @@ export default function FAQ() {
         <div className="mt-12 divide-y divide-line">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
+            const panelId = `faq-panel-${i}`;
+            const buttonId = `faq-button-${i}`;
             return (
               <div key={i}>
                 <button
+                  id={buttonId}
                   className="flex w-full items-center justify-between gap-4 py-5 text-left"
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   aria-expanded={isOpen}
+                  aria-controls={panelId}
                 >
                   <span className="text-[16px] font-semibold text-ink">
                     {faq.q}
@@ -83,6 +87,9 @@ export default function FAQ() {
                   <ChevronIcon open={isOpen} />
                 </button>
                 <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
                   className={`grid transition-[grid-template-rows] duration-300 ease-out ${
                     isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                   }`}

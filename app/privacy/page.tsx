@@ -147,7 +147,13 @@ export default function PrivacyPage() {
               </li>
               <li>
                 <strong>TelemetryDeck</strong> &mdash; receives anonymous
-                usage analytics.
+                in-app usage analytics from the iOS app.
+              </li>
+              <li>
+                <strong>Vercel Web Analytics</strong> &mdash; receives
+                anonymous page-view metrics from this website
+                (phacotrack.com). No cookies, no identifiers, no
+                cross-site tracking.
               </li>
             </ul>
           </Section>
