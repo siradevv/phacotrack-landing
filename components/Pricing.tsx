@@ -4,7 +4,7 @@ import { monthlyPriceLabel, yearlyPriceLabel, yearlySavingsPercent } from "@/lib
 import { APP_STORE_URL } from "@/lib/links";
 
 const freeBullets = [
-  "Up to 20 cases (lifetime)",
+  "Up to 100 cases (lifetime)",
   "5 AI scans per day",
   "Basic analytics dashboard",
   "Your case data stays on-device",
@@ -47,7 +47,7 @@ export default function Pricing() {
         <AnimateOnScroll>
           <div className="flex h-full flex-col rounded-2xl border border-line bg-surface px-7 py-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <h3 className="text-xl font-bold text-ink">Free</h3>
-            <p className="mt-1 text-[14px] text-ink-muted">For your first 20 cases</p>
+            <p className="mt-1 text-[14px] text-ink-muted">For your first 100 cases</p>
             <div className="mt-4 flex items-baseline gap-1">
               <span className="text-[2.5rem] font-bold leading-none text-ink">$0</span>
               <span className="text-[15px] text-ink-muted">forever</span>
