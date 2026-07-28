@@ -28,7 +28,7 @@ export default function PrivacyPage() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Privacy Policy
         </h1>
-        <p className="mt-2 text-sm text-ink-muted">Last updated: 5 May 2026</p>
+        <p className="mt-2 text-sm text-ink-muted">Last updated: 28 July 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
           <Section title="What We Collect">
@@ -46,9 +46,10 @@ export default function PrivacyPage() {
 
           <Section title="Account & Cloud Sync">
             <p>
-              Sign in with Apple is required. When you sign in, we receive
-              your Apple-issued user identifier and (if you choose to share it)
-              your name and email. We store an authentication token on the
+              Sign in with Apple is optional. You can use the app and run a
+              limited number of AI scans without signing in. When you do sign
+              in, we receive your Apple-issued user identifier and (if you
+              choose to share it) your name and email. We store an authentication token on the
               server so you can stay signed in without re-entering credentials.
             </p>
             <p>
@@ -97,10 +98,10 @@ export default function PrivacyPage() {
               request, and neither uses them for training.
             </p>
             <p>
-              A copy of each scan is retained on our server for quality
-              monitoring. Samples are deleted automatically 90 days after
-              capture, and immediately when you delete your account. To request
-              earlier removal of specific samples, contact{" "}
+              When you are signed in, a copy of each scan is retained on our
+              server for quality monitoring. Samples are deleted automatically
+              90 days after capture, and immediately when you delete your
+              account. To request earlier removal of specific samples, contact{" "}
               <a
                 href="mailto:support@phacotrack.com"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
@@ -108,6 +109,13 @@ export default function PrivacyPage() {
                 support@phacotrack.com
               </a>
               .
+            </p>
+            <p>
+              When you are not signed in, scans are handled more privately: the
+              image is used only to extract your measurements and is never
+              stored on our server. To count your free guest scans, the app
+              sends a random identifier created on your device &mdash; it is not
+              your name, email, or Apple ID, and we do not use it to track you.
             </p>
           </Section>
 

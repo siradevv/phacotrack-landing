@@ -28,7 +28,7 @@ export default function TermsPage() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Terms of Service
         </h1>
-        <p className="mt-2 text-sm text-ink-muted">Last updated: 5 May 2026</p>
+        <p className="mt-2 text-sm text-ink-muted">Last updated: 28 July 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
           <Section title="Acceptance">
@@ -53,8 +53,11 @@ export default function TermsPage() {
 
           <Section title="Account & Subscription">
             <p>
-              Sign in with Apple is required. You are responsible for the
-              security of your Apple ID.
+              Sign in with Apple is optional. You can log cases and run a
+              limited number of AI scans without an account; signing in raises
+              your scan allowance and, with a Pro subscription, enables
+              encrypted cloud sync across your devices. If you sign in, you are
+              responsible for the security of your Apple ID.
             </p>
             <p>
               Pro subscriptions are billed through the App Store and renew
