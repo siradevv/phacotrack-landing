@@ -28,13 +28,21 @@ export default function TermsPage() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Terms of Service
         </h1>
-        <p className="mt-2 text-sm text-ink-muted">Last updated: 28 July 2026</p>
+        <p className="mt-2 text-sm text-ink-muted">Last updated: 14 November 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
           <Section title="Acceptance">
             <p>
               By installing or using PhacoTrack, you agree to these Terms. If you
-              do not agree, please discontinue use.
+              do not agree, please stop using the app. If you downloaded
+              PhacoTrack from the App Store, Apple&rsquo;s{" "}
+              <a
+                href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
+              >
+                Standard Licensed Application End User License Agreement
+              </a>{" "}
+              also applies.
             </p>
           </Section>
 
@@ -46,33 +54,55 @@ export default function TermsPage() {
             <p>
               It is not a registered medical device, electronic health record, or
               clinical decision-support tool. It does not diagnose, recommend
-              treatment, or substitute for professional clinical judgment. Always
-              verify AI-extracted data before using it in any clinical decision.
+              treatment, or substitute for professional clinical judgement.
+              Always check AI-extracted values against the original document
+              before relying on them.
             </p>
           </Section>
 
-          <Section title="Account & Subscription">
+          <Section title="Free Plan & Pro">
+            <p>
+              PhacoTrack has a free plan and a paid Pro subscription. The free
+              plan includes a limited number of saved cases and AI scans; the
+              current limits are shown in the app and may change. Pro removes
+              these limits and adds features such as full Insights, PDF case
+              reports, encrypted backup export, and encrypted cloud sync.
+            </p>
+          </Section>
+
+          <Section title="Account & Sign-In">
             <p>
               Sign in with Apple is optional. You can log cases and run a
-              limited number of AI scans without an account; signing in raises
-              your scan allowance and, with a Pro subscription, enables
-              encrypted cloud sync across your devices. If you sign in, you are
-              responsible for the security of your Apple ID.
+              limited number of AI scans without an account; signing in gives
+              you more free scans each day. Cloud sync needs both an account and
+              a Pro subscription &mdash; without them, your cases are stored only
+              on your device. If you sign in, you are responsible for the
+              security of your Apple ID.
             </p>
+          </Section>
+
+          <Section title="Subscriptions & Free Trials">
             <p>
-              Pro subscriptions are billed through the App Store and renew
-              automatically unless cancelled at least 24 hours before the next
-              billing period. You can manage or cancel anytime in your Apple ID
-              settings. Refunds are handled by Apple.
+              Pro is billed to your Apple ID and renews automatically at the end
+              of each period unless you cancel at least 24 hours before it ends.
+              If you start a free trial, it becomes a paid subscription when the
+              trial ends unless you cancel at least 24 hours before then. Prices
+              are shown in the app before you buy. You can manage or cancel your
+              subscription at any time in your Apple ID settings. Refunds are
+              handled by Apple.
             </p>
           </Section>
 
           <Section title="Acceptable Use">
             <p>
               Use PhacoTrack only as a personal surgical logbook for qualified
-              ophthalmologists. Do not share your account with anyone, do not
-              upload non-clinical material such as patient photographs or staff
-              images, and do not reverse engineer the app.
+              ophthalmologists. Do not share your account with anyone, and do
+              not reverse engineer the app.
+            </p>
+            <p>
+              Use AI scanning only for clinical documents such as biometry
+              printouts, specular microscopy reports and operation lists. Do not
+              photograph patients or staff.
             </p>
             <p>
               You are responsible for using PhacoTrack in line with applicable
@@ -83,7 +113,8 @@ export default function TermsPage() {
           <Section title="Your Data & Compliance">
             <p>
               You own the data you enter. We do not claim any rights to it. How
-              we store and process your data is described in the{" "}
+              we store and process your data &mdash; including the photos you
+              send for AI scanning &mdash; is described in the{" "}
               <Link
                 href="/privacy"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
@@ -105,8 +136,12 @@ export default function TermsPage() {
             <p>
               PhacoTrack is provided &ldquo;as is.&rdquo; We do not guarantee
               that the app will be error-free, always available, or that
-              AI-extracted data will be accurate. You are responsible for keeping
-              backups of important data.
+              AI-extracted data will be accurate.
+            </p>
+            <p>
+              You are responsible for keeping backups of important data. On the
+              free plan your cases are stored only on your device, so deleting
+              the app deletes them.
             </p>
             <p>
               To the extent allowed by law, we are not liable for any losses
@@ -119,10 +154,16 @@ export default function TermsPage() {
 
           <Section title="Changes & Termination">
             <p>
-              We may update these Terms from time to time. Continued use after
-              changes are posted means you accept them. We may suspend cloud
-              access if you violate these Terms. You can delete your account from
-              Settings at any time.
+              We may update these Terms, and change or discontinue features
+              &mdash; including free-plan limits &mdash; from time to time. When
+              we change these Terms we update the date above, and continued use
+              after the change means you accept it. We may suspend cloud access
+              if you violate these Terms.
+            </p>
+            <p>
+              If you have an account, you can delete it from Settings at any
+              time. This permanently removes your data from our server; cases
+              stored on your device stay until you delete them or the app.
             </p>
           </Section>
 
