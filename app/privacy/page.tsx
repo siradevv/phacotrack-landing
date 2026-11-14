@@ -28,7 +28,7 @@ export default function PrivacyPage() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Privacy Policy
         </h1>
-        <p className="mt-2 text-sm text-ink-muted">Last updated: 28 July 2026</p>
+        <p className="mt-2 text-sm text-ink-muted">Last updated: 14 November 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
           <Section title="What We Collect">
@@ -94,14 +94,24 @@ export default function PrivacyPage() {
             <p>
               The app does not attach patient details to the request. Clinical
               printouts may, however, contain identifiers that are visible in
-              the image itself. Neither AI provider retains inputs beyond the
-              request, and neither uses them for training.
+              the image itself. Neither AI provider uses scan images to train
+              its models. Each may keep requests for a limited time for abuse
+              and safety monitoring, as its API terms allow.
             </p>
             <p>
-              When you are signed in, a copy of each scan is retained on our
-              server for quality monitoring. Samples are deleted automatically
-              90 days after capture, and immediately when you delete your
-              account. To request earlier removal of specific samples, contact{" "}
+              We do not keep your scan images. When you are signed in, each scan
+              leaves a short diagnostic record on our server &mdash; the document
+              type, which AI service read it, how long it took, and which fields
+              it was unsure about &mdash; with no image, no measurements and no
+              patient details. These records are deleted automatically after 90
+              days, and immediately when you delete your account.
+            </p>
+            <p>
+              So that a scan is not processed twice if your connection drops,
+              the extracted result (which can include details printed on the
+              sheet, such as a patient name) is held on our server for about an
+              hour and deleted within a day. For questions about scan data,
+              contact{" "}
               <a
                 href="mailto:support@phacotrack.com"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
@@ -111,7 +121,7 @@ export default function PrivacyPage() {
               .
             </p>
             <p>
-              When you are not signed in, scans are handled more privately: the
+              When you are not signed in, no diagnostic record is kept: the
               image is used only to extract your measurements and is never
               stored on our server. To count your free guest scans, the app
               sends a random identifier created on your device &mdash; it is not

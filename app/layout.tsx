@@ -8,7 +8,7 @@ const SITE_URL = "https://phacotrack.com";
 export const metadata: Metadata = {
   title: "PhacoTrack — Personal Cataract Surgery Outcomes Tracker",
   description:
-    "Cataract surgery outcomes tracker for ophthalmologists. AI biometry scanning, personal analytics, IOL constant optimisation, SIA analysis. Free to start.",
+    "Cataract surgery outcomes tracker for ophthalmologists. AI biometry scanning, personal analytics, refractive outcomes, SIA analysis. Free to start.",
   keywords: [
     "cataract surgery outcomes",
     "surgical logbook",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PhacoTrack — Know your numbers. Improve your surgery.",
     description:
-      "Personal analytics dashboard for cataract surgeons. AI-powered biometry scanning, IOL constant optimisation, and SIA analysis.",
+      "Personal analytics dashboard for cataract surgeons. AI-powered biometry scanning, refractive outcome tracking, and SIA analysis.",
     type: "website",
     url: SITE_URL,
     siteName: "PhacoTrack",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PhacoTrack — Know your numbers. Improve your surgery.",
     description:
-      "Personal analytics dashboard for cataract surgeons. AI-powered biometry scanning, IOL constant optimisation, and SIA analysis.",
+      "Personal analytics dashboard for cataract surgeons. AI-powered biometry scanning, refractive outcome tracking, and SIA analysis.",
     images: ["/opengraph-image"],
   },
   metadataBase: new URL(SITE_URL),

@@ -20,7 +20,7 @@ const rows = [
   { feature: "Cataract-specific fields", paper: false, generic: false, enterprise: true, phacotrack: true },
   { feature: "AI scan extraction", paper: false, generic: false, enterprise: "Own devices", phacotrack: "Any device" },
   { feature: "Case entry < 30 seconds", paper: false, generic: false, enterprise: false, phacotrack: true },
-  { feature: "Personal IOL constants", paper: false, generic: false, enterprise: "Some", phacotrack: true },
+  { feature: "Accuracy by lens & formula", paper: false, generic: false, enterprise: "Some", phacotrack: true },
   { feature: "SIA analysis", paper: false, generic: false, enterprise: "Some", phacotrack: "Built-in" },
   { feature: "Mobile-first", paper: false, generic: "Partial", enterprise: false, phacotrack: true },
   { feature: "CSV & PDF export", paper: false, generic: "Basic", enterprise: true, phacotrack: true },

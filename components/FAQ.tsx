@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Is my patient data safe?",
-    a: "Case data is stored locally on your device and protected by Face ID or Touch ID. Cloud sync (Pro) encrypts patient identifiers (name, hospital number, date of birth, notes) with AES-256 on your device before upload \u2014 the encryption keys are tied to your Apple account. AI scanning is the one exception: photos are uploaded to our server for measurement extraction and a copy is retained so we can monitor accuracy. You can request removal of your scanned images at any time. See our Privacy Policy for full details.",
+    a: "Case data is stored locally on your device and protected by Face ID or Touch ID. Cloud sync (Pro) encrypts patient identifiers (name, hospital number, date of birth, notes) with AES-256 on your device before upload \u2014 the encryption keys are tied to your Apple account. AI scanning is the one exception: photos are uploaded to our server so an AI service can read the measurements. We don\u2019t keep the photos. See our Privacy Policy for full details.",
   },
   {
     q: "Can I export my data for audits or research?",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "How is PhacoTrack different from IOL calculators?",
-    a: "IOL calculators help you pick a lens for one patient. PhacoTrack tracks your outcomes across all patients \u2014 so you can see your real prediction accuracy, optimise your personal IOL constants from your own surgical data, analyse your SIA, and monitor your complication rate over time.",
+    a: "IOL calculators help you pick a lens for one patient. PhacoTrack tracks your outcomes across all patients \u2014 so you can see your real prediction accuracy, compare your accuracy by lens and formula, analyse your SIA, and monitor your complication rate over time.",
   },
   {
     q: "What happens to my data if I cancel Pro?",

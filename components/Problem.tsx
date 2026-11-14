@@ -87,7 +87,7 @@ export default function Problem() {
               {[
                 "No visibility into your own outcomes",
                 "No way to know if you\u2019re above or below average",
-                "Still using factory IOL constants",
+                "No idea how accurate your lens choices really are",
                 "No data for audits or appraisals",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 text-[14px] text-ink-muted">

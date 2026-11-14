@@ -73,7 +73,7 @@ export default function Pricing() {
         <AnimateOnScroll delay={120}>
           <div className="relative flex h-full flex-col rounded-2xl border-2 border-accent bg-surface px-7 py-8 shadow-[0_8px_30px_-8px_rgba(42,122,223,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-8px_rgba(42,122,223,0.28)]">
             <div className="absolute -top-3.5 right-6 rounded-full bg-accent px-4 py-1 text-[12px] font-semibold text-white">
-              Most Popular
+              Full access
             </div>
 
             <h3 className="text-xl font-bold text-ink">Pro</h3>

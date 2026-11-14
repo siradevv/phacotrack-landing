@@ -42,8 +42,8 @@ export default function Hero() {
               <p className="mt-6 max-w-xl text-[1.1rem] leading-relaxed text-ink-muted">
                 PhacoTrack gives you a personal analytics dashboard for every
                 cataract case — track your true surgical performance from
-                biometry to post-op refraction. Built by ophthalmologists,
-                for ophthalmologists.
+                biometry to post-op refraction. Built by a practising cataract
+                surgeon, for cataract surgeons.
               </p>
             </AnimateOnScroll>
             <AnimateOnScroll delay={300}>
