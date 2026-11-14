@@ -55,8 +55,10 @@ export default function PrivacyPage() {
             <p>
               Cloud sync requires a Pro subscription. Free-tier data stays on
               your device only and is never uploaded to our server. With Pro,
-              your surgeon setup and case data sync across your signed-in
-              devices through our server.
+              your case data syncs across your signed-in devices through our
+              server. Your app preferences and surgeon setup (equipment and
+              defaults) sync between your devices through your own iCloud
+              account, run by Apple &mdash; not through our server.
             </p>
             <p>
               Patient identity fields are stored on our server only in encrypted
