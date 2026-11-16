@@ -85,7 +85,7 @@ export default function FinalCTA() {
               Terms of Service
             </Link>
             <a
-              href="mailto:support@phacotrack.com"
+              href="mailto:sira.dev@hotmail.com"
               className="transition-colors hover:text-ink"
             >
               Contact

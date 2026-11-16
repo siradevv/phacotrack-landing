@@ -28,7 +28,7 @@ export default function PrivacyPage() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Privacy Policy
         </h1>
-        <p className="mt-2 text-sm text-ink-muted">Last updated: 14 November 2026</p>
+        <p className="mt-2 text-sm text-ink-muted">Last updated: 16 November 2026</p>
 
         <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-ink/80">
           <Section title="What We Collect">
@@ -115,10 +115,10 @@ export default function PrivacyPage() {
               hour and deleted within a day. For questions about scan data,
               contact{" "}
               <a
-                href="mailto:support@phacotrack.com"
+                href="mailto:sira.dev@hotmail.com"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
               >
-                support@phacotrack.com
+                sira.dev@hotmail.com
               </a>
               .
             </p>
@@ -241,10 +241,10 @@ export default function PrivacyPage() {
             <p>
               For questions about this policy or your data, contact{" "}
               <a
-                href="mailto:support@phacotrack.com"
+                href="mailto:sira.dev@hotmail.com"
                 className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
               >
-                support@phacotrack.com
+                sira.dev@hotmail.com
               </a>
               .
             </p>
